@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wargames Wiki</title>
+    <meta name="description" content="Official Wargames wiki, guides, tutorials, release notes, and documentation." />
+    <link rel="icon" type="image/png" href="assets/images/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar">
+        <div class="brand-block">
+          <button id="sidebarToggle" class="icon-button mobile-only" aria-label="Toggle navigation">☰</button>
+          <img src="assets/images/logo.png" alt="Wargames" class="brand-logo" id="brandLogo" />
+          <div>
+            <div class="eyebrow">Official community wiki</div>
+            <h1>Wargames Wiki</h1>
+            <p class="tagline">Starter documentation, guides, tutorials, and release notes for your modpack and servers.</p>
+          </div>
+        </div>
+        <div class="topbar-actions">
+          <a id="discordLink" class="social-link primary" href="#" target="_blank" rel="noreferrer">
+            <img src="assets/icons/discord.png" alt="Discord" />
+            <span>Discord</span>
+          </a>
+          <a id="technicLink" class="social-link" href="#" target="_blank" rel="noreferrer">
+            <img src="assets/icons/technic.png" alt="Technic" />
+            <span>Technic</span>
+          </a>
+          <a id="curseforgeLink" class="social-link" href="#" target="_blank" rel="noreferrer">
+            <img src="assets/icons/curseforge.png" alt="CurseForge" />
+            <span>CurseForge</span>
+          </a>
+        </div>
+      </header>
+
+      <div class="layout">
+        <aside class="sidebar" id="sidebar">
+          <div class="sidebar-card">
+            <div class="sidebar-title">Navigation</div>
+            <nav id="navList"></nav>
+          </div>
+
+          <div class="sidebar-card compact-card">
+            <div class="sidebar-title">Site status</div>
+            <div class="status-stack" id="siteStatus"></div>
+          </div>
+
+          <div class="sidebar-card compact-card">
+            <div class="sidebar-title">Contributing</div>
+            <p>Every page can show its last update date, visible release status, and a lightweight version history block.</p>
+            <a class="text-link" id="repoLink" href="#" target="_blank" rel="noreferrer">Open the wiki repository</a>
+          </div>
+        </aside>
+
+        <main class="content" id="content">
+          <section class="hero-panel">
+            <div>
+              <div class="pill">GitHub Pages ready</div>
+              <h2 id="heroTitle">Loading…</h2>
+              <p id="heroSummary"></p>
+            </div>
+            <div class="hero-actions">
+              <a class="button button-primary" id="heroPrimary" href="#">Get started</a>
+              <a class="button button-secondary" id="heroSecondary" href="#">View releases</a>
+            </div>
+          </section>
+
+          <div id="pageBanner"></div>
+
+          <article class="page-card">
+            <div class="page-meta-row">
+              <div>
+                <div class="eyebrow">Current page</div>
+                <h2 id="pageTitle"></h2>
+              </div>
+              <div class="meta-grid" id="pageMeta"></div>
+            </div>
+            <div id="pageBody" class="prose"></div>
+          </article>
+
+          <section class="split-grid">
+            <section class="page-card" id="videoSection"></section>
+            <section class="page-card" id="resourceSection"></section>
+          </section>
+
+          <section class="split-grid">
+            <section class="page-card" id="historySection"></section>
+            <section class="page-card" id="discordSection"></section>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script src="data/site-data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
