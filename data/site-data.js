@@ -58,7 +58,11 @@ window.WARGAMES_WIKI = {
         { id: 'wgevents', label: 'WGEvents', status: 'live', visible: true },
         { id: 'mcheli', label: 'MCHeli-R Wargames Edition', status: 'live', visible: true },
         { id: 'fmur', label: 'Flan\'s Mod Ultimate-R Wargames Edition', status: 'live', visible: true },
-        { id: 'ntm-space', label: 'NTM: Space', status: 'live', visible: true },
+        { id: 'ntm-space', label: 'NTM: Space overview', status: 'live', visible: true },
+        { id: 'ntm-space-wdg-overview', label: 'HBM Space WDG Edition overview', status: 'live', visible: true },
+        { id: 'ntm-space-protection', label: 'Protection & ownership system', status: 'live', visible: true },
+        { id: 'ntm-space-weapons', label: 'Weapon & missile changes', status: 'live', visible: true },
+        { id: 'ntm-space-server-impact', label: 'Server impact & use cases', status: 'live', visible: true },
         { id: 'foliage-plus', label: 'Foliage+', status: 'live', visible: true },
         { id: 'hitmarkerplus', label: 'HitmarkerPlus', status: 'live', visible: true },
         { id: 'custom-mods', label: 'Custom mods and forks', status: 'live', visible: true },
@@ -386,7 +390,7 @@ window.WARGAMES_WIKI = {
     'custom-mods': {
       title: 'Custom mods and forks',
       summary: 'An index page for the Wargames-specific mods and forks currently represented in the uploaded source archives.',
-      version: 'Documentation pass 2',
+      version: 'Documentation pass 3',
       releaseState: 'Live',
       lastUpdated: '2026-04-07',
       needsUpdate: false,
@@ -398,13 +402,13 @@ window.WARGAMES_WIKI = {
           <li><strong>WGEvents</strong> — a separate event-server mod for match flow, spawns, voting, and gamemode automation</li>
           <li><strong>MCHeli-R Wargames Edition</strong> — the Wargames vehicle and aircraft fork built from MCHeli-Reforged</li>
           <li><strong>Flan's Mod Ultimate-R Wargames Edition</strong> — the Wargames infantry and weapon fork built from FMUR</li>
-          <li><strong>NTM: Space</strong> — the HBM Space branch used in the Wargames stack</li>
+          <li><strong>HBM Space WDG Edition</strong> — a systems-focused fork of the HBM Space branch with ownership tracking, protection-aware weapons, and missile behaviour improvements</li>
           <li><strong>Foliage+</strong> — passable leaves, slowdown, and rustling behaviour for foliage interaction</li>
           <li><strong>HitmarkerPlus</strong> — a lightweight hitmarker feedback mod for Flan's weapon damage</li>
         </ul>
         <div class="callout">
           <strong>Documentation note</strong>
-          <p>This page is now an index rather than the main writeup. Each custom project should have its own page so players can find the relevant information without digging through one giant mixed summary.</p>
+          <p>The HBM Space fork now has a general overview page and several focused subpages so the WDG-specific changes are documented separately from the base HBM Space progression and content.</p>
         </div>
       `,
       resources: [
@@ -433,10 +437,34 @@ window.WARGAMES_WIKI = {
           label: 'Open FMUR page',
         },
         {
-          title: 'NTM: Space',
-          text: 'The HBM Space branch page.',
+          title: 'NTM: Space overview',
+          text: 'The general HBM Space branch overview and external wiki reference.',
           url: '#ntm-space',
-          label: 'Open NTM: Space page',
+          label: 'Open NTM: Space overview',
+        },
+        {
+          title: 'HBM Space WDG Edition overview',
+          text: 'The WDG-specific fork overview page.',
+          url: '#ntm-space-wdg-overview',
+          label: 'Open WDG overview',
+        },
+        {
+          title: 'Protection & ownership system',
+          text: 'How ownership and protection affect explosives, missiles, and turrets.',
+          url: '#ntm-space-protection',
+          label: 'Open protection page',
+        },
+        {
+          title: 'Weapon & missile changes',
+          text: 'Gameplay-facing missile and weapon behaviour changes.',
+          url: '#ntm-space-weapons',
+          label: 'Open weapon changes page',
+        },
+        {
+          title: 'Server impact & use cases',
+          text: 'Why this fork exists and what server problems it solves.',
+          url: '#ntm-space-server-impact',
+          label: 'Open server impact page',
         },
         {
           title: 'Foliage+',
@@ -453,7 +481,7 @@ window.WARGAMES_WIKI = {
       ],
       videos: [],
       history: [
-        { date: '2026-04-07', text: 'Converted the custom-mods page into an index and split the uploaded custom projects into separate wiki pages.' },
+        { date: '2026-04-07', text: 'Expanded the HBM Space documentation path into a base overview plus dedicated WDG Edition subpages.' },
       ],
     },
     modpack: {
@@ -651,25 +679,63 @@ window.WARGAMES_WIKI = {
       ],
     },
     'ntm-space': {
-      title: 'NTM: Space',
-      summary: 'The HBM Space branch present in the Wargames source stack.',
+      title: 'NTM: Space overview',
+      summary: 'The base HBM Space branch used by Wargames, with the WDG-specific fork documented separately.',
       version: 'HBM Space source context',
       releaseState: 'Live',
       lastUpdated: '2026-04-07',
       needsUpdate: false,
       updateMessage: '',
       body: `
-        <p><strong>NTM: Space</strong> is the HBM Space branch represented by the uploaded source archive. Its packaged metadata describes it as a mod that adds weapons, nuclear-themed systems, and space travel.</p>
-        <h3>What is visible in the uploaded source</h3>
+        <p><strong>NTM: Space</strong> is the HBM Space branch represented in the Wargames source stack. It is the larger base mod that provides the main content, progression, machinery, weapons, and space-related systems.</p>
+        <div class="callout">
+          <strong>Important documentation note</strong>
+          <p>This page is the general overview only. For normal progression, content, machines, and gameplay reference, use the official HBM Space wiki. The Wargames-specific changes are documented in the dedicated WDG Edition pages linked below.</p>
+        </div>
+        <h3>What this base mod is for</h3>
         <ul>
-          <li>A very large content-heavy codebase with weapons, machines, blocks, configuration systems, and world systems</li>
-          <li>Radar and combat-related surfaces through the public API and entity interfaces</li>
-          <li>Broader machinery, explosives, and world-content support through the main HBM-style package structure</li>
+          <li>Weapons, explosives, and nuclear-themed systems</li>
+          <li>Machines, blocks, and world interaction systems</li>
+          <li>Space-related progression and content</li>
+          <li>A large content-heavy foundation that other Wargames systems build around</li>
         </ul>
-        <h3>Why this page exists</h3>
-        <p>Even though this is a much bigger and older codebase than some of the smaller Wargames support mods, it is still part of the custom stack you uploaded and should have its own page in the wiki rather than being buried as a one-line bullet elsewhere.</p>
+        <h3>How to use this wiki section</h3>
+        <ul>
+          <li>Use the official HBM Space wiki for base progression and content reference</li>
+          <li>Use the WDG Edition subpages here for the fork-specific ownership, protection, missile, and server-behaviour changes</li>
+        </ul>
       `,
       resources: [
+        {
+          title: 'Official HBM Space wiki',
+          text: 'Use this for standard progression, machines, items, and general base-mod documentation.',
+          url: 'https://nucleartech.wiki/wiki/NTM:_Space',
+          label: 'Open official HBM Space wiki',
+        },
+        {
+          title: 'HBM Space WDG Edition overview',
+          text: 'General overview of what the WDG fork changes.',
+          url: '#ntm-space-wdg-overview',
+          label: 'Open WDG overview',
+        },
+        {
+          title: 'Protection & ownership system',
+          text: 'How explosives, missiles, and turrets interact with protection.',
+          url: '#ntm-space-protection',
+          label: 'Open protection page',
+        },
+        {
+          title: 'Weapon & missile changes',
+          text: 'Gameplay-facing missile and weapon behaviour changes.',
+          url: '#ntm-space-weapons',
+          label: 'Open weapon changes page',
+        },
+        {
+          title: 'Server impact & use cases',
+          text: 'Why the fork exists and what problems it is intended to solve.',
+          url: '#ntm-space-server-impact',
+          label: 'Open server impact page',
+        },
         {
           title: 'Custom mods index',
           text: 'Return to the custom stack index page.',
@@ -679,7 +745,210 @@ window.WARGAMES_WIKI = {
       ],
       videos: [],
       history: [
-        { date: '2026-04-07', text: 'Added a separate NTM: Space page based on the uploaded HBM Space source archive and packaged metadata.' },
+        { date: '2026-04-07', text: 'Reworked the NTM: Space page into a base overview and linked the WDG-specific documentation into dedicated subpages.' },
+      ],
+    },
+    'ntm-space-wdg-overview': {
+      title: 'HBM Space WDG Edition overview',
+      summary: 'A high-level overview of what the WDG fork changes and who it is for.',
+      version: 'HBM Space WDG Edition docs',
+      releaseState: 'Live',
+      lastUpdated: '2026-04-07',
+      needsUpdate: false,
+      updateMessage: '',
+      body: `
+        <p><strong>HBM Space WDG Edition</strong> is a systems-focused fork of the HBM Space branch. It is primarily intended for multiplayer environments where high-impact weapons need to interact cleanly with ownership, faction, and territory rules.</p>
+        <p>This fork is not a content-focused rewrite. Its purpose is to improve system behaviour, attribution, and protection-aware interaction across destructive weapons and launch systems.</p>
+        <h3>What the fork changes</h3>
+        <ul>
+          <li>Persistent owner or faction tracking for bombs, explosives, missiles, shells, turrets, and launch systems</li>
+          <li>Detonation and effect handling that respects protected claims or territory</li>
+          <li>Faction-aware turret behaviour and projectile ownership propagation</li>
+          <li>Missile behaviour improvements such as bunker-buster, airburst, and improved penetration handling</li>
+          <li>Launch validation tied into target legality and protection checks</li>
+        </ul>
+        <h3>Who this fork is for</h3>
+        <ul>
+          <li>Server owners running claims, factions, or protected territory systems</li>
+          <li>Modpacks that want to keep HBM Space weapon systems without allowing uncontrolled griefing</li>
+          <li>Players who need consistent weapon behaviour in structured multiplayer combat</li>
+          <li>Developers reviewing what the WDG fork changes without re-documenting the whole base mod</li>
+        </ul>
+      `,
+      resources: [
+        {
+          title: 'Official HBM Space wiki',
+          text: 'Use this for standard progression and base-mod documentation.',
+          url: 'https://nucleartech.wiki/wiki/NTM:_Space',
+          label: 'Open official HBM Space wiki',
+        },
+        {
+          title: 'Protection & ownership system',
+          text: 'Detailed behaviour of attribution and protection-aware weapon handling.',
+          url: '#ntm-space-protection',
+          label: 'Open protection page',
+        },
+        {
+          title: 'Weapon & missile changes',
+          text: 'Gameplay-facing changes to missile and weapon behaviour.',
+          url: '#ntm-space-weapons',
+          label: 'Open weapon changes page',
+        },
+      ],
+      videos: [],
+      history: [
+        { date: '2026-04-07', text: 'Added the dedicated HBM Space WDG Edition overview page.' },
+      ],
+    },
+    'ntm-space-protection': {
+      title: 'Protection & ownership system',
+      summary: 'How HBM Space WDG Edition handles ownership tracking and protection-aware destructive effects.',
+      version: 'HBM Space WDG Edition docs',
+      releaseState: 'Live',
+      lastUpdated: '2026-04-07',
+      needsUpdate: false,
+      updateMessage: '',
+      body: `
+        <p>The WDG Edition adds persistent ownership tracking to major destructive systems and uses that context to decide whether effects are allowed in protected areas.</p>
+        <h3>What carries ownership</h3>
+        <ul>
+          <li>Bombs and explosives</li>
+          <li>Missiles and rockets</li>
+          <li>Shells and similar long-range munitions</li>
+          <li>Turrets and their projectiles</li>
+          <li>Launch systems and target designators</li>
+        </ul>
+        <h3>What protection affects</h3>
+        <ul>
+          <li>Detonation checks in protected claims or territory</li>
+          <li>Whether an explosion is allowed, limited, or blocked</li>
+          <li>Whether block damage is skipped in protected chunks</li>
+          <li>Whether radiation or contamination spread is blocked or limited</li>
+          <li>Whether EMP effects are allowed in protected areas</li>
+          <li>Whether player damage is filtered through protection rules</li>
+        </ul>
+        <h3>Examples</h3>
+        <ul>
+          <li>A nuke can still be attributed to its owner instead of becoming an anonymous explosion source</li>
+          <li>A missile hitting protected territory can be blocked or modified at the impact point</li>
+          <li>A turret projectile can carry the turret owner context instead of behaving like an unowned shot</li>
+          <li>Protected chunks can prevent block destruction even if a weapon still detonates visually or partially</li>
+        </ul>
+      `,
+      resources: [
+        {
+          title: 'HBM Space WDG Edition overview',
+          text: 'Return to the high-level fork overview.',
+          url: '#ntm-space-wdg-overview',
+          label: 'Back to WDG overview',
+        },
+        {
+          title: 'Weapon & missile changes',
+          text: 'See the gameplay-facing missile behaviour changes.',
+          url: '#ntm-space-weapons',
+          label: 'Open weapon changes page',
+        },
+      ],
+      videos: [],
+      history: [
+        { date: '2026-04-07', text: 'Added the HBM Space WDG Edition protection and ownership page.' },
+      ],
+    },
+    'ntm-space-weapons': {
+      title: 'Weapon & missile changes',
+      summary: 'Gameplay-facing missile, projectile, and turret behaviour changes in HBM Space WDG Edition.',
+      version: 'HBM Space WDG Edition docs',
+      releaseState: 'Live',
+      lastUpdated: '2026-04-07',
+      needsUpdate: false,
+      updateMessage: '',
+      body: `
+        <p>The WDG Edition changes how several weapon systems behave in practice, especially where ownership and long-range impact handling are important.</p>
+        <h3>Projectile and turret behaviour</h3>
+        <ul>
+          <li>Missiles, rockets, and shells now carry ownership data</li>
+          <li>Long-range weapons respect territory rules at the point of impact</li>
+          <li>Turrets use faction-aware targeting logic</li>
+          <li>Turret projectiles inherit ownership context</li>
+        </ul>
+        <h3>Missile system improvements</h3>
+        <ul>
+          <li><strong>Bunker-buster logic</strong> for penetration-focused strikes</li>
+          <li><strong>Airburst detonation</strong> for above-ground detonation behaviour</li>
+          <li><strong>Improved cluster or burst handling</strong> for multi-stage payloads</li>
+          <li><strong>Improved drill or penetration handling</strong> for deeper impact behaviour</li>
+        </ul>
+        <h3>Launch system behaviour</h3>
+        <ul>
+          <li>Designators store owner data</li>
+          <li>Launch systems validate target legality before firing</li>
+          <li>Launch systems integrate with protection-aware checks</li>
+        </ul>
+      `,
+      resources: [
+        {
+          title: 'Protection & ownership system',
+          text: 'See how these weapon changes interact with protection and ownership rules.',
+          url: '#ntm-space-protection',
+          label: 'Open protection page',
+        },
+        {
+          title: 'Server impact & use cases',
+          text: 'See why these changes matter for multiplayer servers.',
+          url: '#ntm-space-server-impact',
+          label: 'Open server impact page',
+        },
+      ],
+      videos: [],
+      history: [
+        { date: '2026-04-07', text: 'Added the HBM Space WDG Edition weapon and missile changes page.' },
+      ],
+    },
+    'ntm-space-server-impact': {
+      title: 'Server impact & use cases',
+      summary: 'Why HBM Space WDG Edition exists and what multiplayer problems it is intended to solve.',
+      version: 'HBM Space WDG Edition docs',
+      releaseState: 'Live',
+      lastUpdated: '2026-04-07',
+      needsUpdate: false,
+      updateMessage: '',
+      body: `
+        <p>This fork exists because large-scale HBM-style weapons are difficult to manage on structured multiplayer servers if they do not carry ownership and do not respect protected areas.</p>
+        <h3>Problems this fork addresses</h3>
+        <ul>
+          <li>Anonymous explosives once placed or fired</li>
+          <li>Long-range weapons bypassing territory rules on impact</li>
+          <li>Protected bases being exposed to uncontrolled explosive block damage</li>
+          <li>Radiation, contamination, and EMP effects crossing into protected space without filtering</li>
+          <li>Turrets and launch systems lacking faction-aware behaviour</li>
+        </ul>
+        <h3>Where this matters most</h3>
+        <ul>
+          <li>Faction servers using claims or protected territory</li>
+          <li>Event servers where powerful weapons need to remain usable but controlled</li>
+          <li>Modpacks that want HBM Space systems without fully open-ended griefing</li>
+          <li>Private multiplayer environments that need attribution and predictable conflict rules</li>
+        </ul>
+        <h3>Practical result</h3>
+        <p>The goal is not to remove destructive weapons. It is to make them behave in a controlled, attributable, and protection-aware way so they can still exist inside a structured server environment.</p>
+      `,
+      resources: [
+        {
+          title: 'HBM Space WDG Edition overview',
+          text: 'Return to the main fork overview.',
+          url: '#ntm-space-wdg-overview',
+          label: 'Back to WDG overview',
+        },
+        {
+          title: 'Official HBM Space wiki',
+          text: 'Use this for standard base-mod progression and content reference.',
+          url: 'https://nucleartech.wiki/wiki/NTM:_Space',
+          label: 'Open official HBM Space wiki',
+        },
+      ],
+      videos: [],
+      history: [
+        { date: '2026-04-07', text: 'Added the HBM Space WDG Edition server impact and use-cases page.' },
       ],
     },
     'foliage-plus': {
