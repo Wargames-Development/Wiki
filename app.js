@@ -65,9 +65,9 @@
   }
 
   function labelForStatus(status) {
-    if (status === 'updating') return 'Updating';
+    if (status === 'updating') return 'Needs work';
     if (status === 'hidden') return 'Hidden';
-    return 'Live';
+    return 'Ready';
   }
 
   function renderPage(pageId) {
@@ -78,7 +78,6 @@
     pageMeta.innerHTML = '';
     [
       ['Version', page.version],
-      ['State', page.releaseState],
       ['Last updated', formatDate(page.lastUpdated)],
       ['Page ID', pageId],
     ].forEach(([label, value]) => {
@@ -92,7 +91,7 @@
     if (page.needsUpdate) {
       pageBanner.innerHTML = `<div class="banner warning"><strong>Update notice.</strong> ${page.updateMessage}</div>`;
     } else {
-      pageBanner.innerHTML = `<div class="banner info"><strong>Stable page.</strong> ${page.summary}</div>`;
+      pageBanner.innerHTML = `<div class="banner info"><strong>Page summary.</strong> ${page.summary}</div>`;
     }
 
     renderResources(page.resources || []);
