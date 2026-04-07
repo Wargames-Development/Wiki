@@ -1,33 +1,82 @@
 window.WIKI_PAGES = window.WIKI_PAGES || {};
 
 window.WIKI_PAGES["fmur"] = {
-  title: "Flan's Mod Ultimate-R Wargames Edition",
-  summary: "The Wargames FMUR fork with WGCore-aware combat, explosion, vehicle, and protection behaviour.",
-  version: "FMUR source 1.58.0_X8 context",
+  title: "Flan's Mod Ultimate-R (FMUR & Wargames Edition)",
+  summary: "Layered overview of FMUR (Reforged/Reloaded) and the Wargames Edition built on top.",
+  version: "FMUR + WDG",
   releaseState: "Live",
   lastUpdated: "2026-04-07",
   needsUpdate: false,
-  updateMessage: "",
-  body: "\n        <p><strong>Flan's Mod Ultimate-R Wargames Edition</strong> is the Wargames-maintained FMUR fork used as part of the wider Wargames combat stack. This edition keeps the Flan-based infantry and vehicle gameplay foundation, but extends it with WGCore-aware permission checks, protection handling, attribution, and compatibility fixes needed for a territory-based multiplayer environment.</p>\n        <h3>What this fork changes</h3>\n        <p>The main purpose of this edition is to make FMUR behave correctly inside the Wargames faction, war, and protection systems instead of treating combat actions as isolated mod logic. In practice, this means combat, explosions, and other harmful interactions are routed through WGCore-aware checks before they are allowed to affect players, entities, or terrain.</p>\n        <h3>Central WGCore integration layer</h3>\n        <p>The integration entry point is handled through <code>com.flansmod.common.wgc.Integrations</code>. This layer centralises the WGCore-facing logic instead of scattering direct protection checks across unrelated systems.</p>\n        <ul>\n          <li><code>canHarmPlayerWGC(...)</code> resolves acting-player ownership and asks WGCore whether a player-targeted hit is allowed</li>\n          <li><code>evaluateExplosionWGC(...)</code> builds explosion attribution and passes full explosion context into WGCore for decision-making</li>\n          <li>Acting-player resolution supports direct players as well as FMUR entities such as seats, driveables, and AA guns where appropriate</li>\n        </ul>\n        <h3>Combat integration</h3>\n        <p>Player harm checks now flow through WGCore-aware validation in the main damage paths instead of assuming every successful hit should always apply.</p>\n        <ul>\n          <li>Bullet hit handling uses WGCore harm checks before damaging player targets</li>\n          <li>Player hitbox resolution respects the same protection path</li>\n          <li>Gun melee damage is checked before applying damage to player targets</li>\n          <li>Grenade direct and proximity harm follows WGCore permission checks</li>\n        </ul>\n        <h3>Explosion handling</h3>\n        <p>Explosion behaviour has been upgraded from a local FMUR-only decision into a WGCore-routed system. The mod now evaluates both block damage and entity damage through WGCore using attributed explosion context.</p>\n        <ul>\n          <li>Explosion origin, source type, and acting player are packaged into WGCore-compatible attribution data</li>\n          <li>WGCore can deny the explosion entirely, deny only block damage, deny only entity damage, or return a filtered block list</li>\n          <li>Protected areas can therefore block terrain grief while still allowing controlled combat behaviour where configured</li>\n          <li>Explosion entity damage against players is rechecked through WGCore before being applied</li>\n        </ul>\n        <p>This is the main reason the Wargames edition behaves correctly in safezones, protected claims, and other rule-controlled areas.</p>\n        <h3>Grenades and flash effects</h3>\n        <p>Grenade-related effects now follow the same server rule expectations as the rest of combat.</p>\n        <ul>\n          <li>Flashbang damage application checks WGCore before affecting player targets</li>\n          <li>Flash effect application is tied to the same validated damage path</li>\n          <li>Explosion-style grenade outcomes are routed through the upgraded explosion handling logic</li>\n        </ul>\n        <h3>Vehicles and collision damage</h3>\n        <p>Vehicle-based harm is also brought into the same rule set. This matters on Wargames because driveables are part of live combat and cannot be allowed to bypass territory protection simply because the damage came from a vehicle interaction.</p>\n        <ul>\n          <li>Driveable collision and roadkill-style damage checks WGCore before harming players</li>\n          <li>Acting-player resolution supports driveables and seats so protection decisions can still be attributed sensibly</li>\n        </ul>\n        <h3>Attribution and damage-source improvements</h3>\n        <p>The Wargames edition adds more reliable source tracking for explosions and indirect harm. This improves rule enforcement and helps WGCore make the correct allow-or-deny decision using real ownership and source information rather than generic damage fallbacks.</p>\n        <ul>\n          <li>Explosion actions are attributed with source-mod identity and source type</li>\n          <li>Acting player identity is derived from the real operator where possible</li>\n          <li>Explosion-aware damage handling reduces protection bypass edge cases</li>\n        </ul>\n        <h3>Cross-platform player stats fix</h3>\n        <p>The player statistics handling has also been corrected for proper non-Windows and dedicated-server behaviour.</p>\n        <ul>\n          <li>Stats directory handling now resolves through safer file-path logic</li>\n          <li>Legacy and buggy historical stats directory variants are detected and migrated</li>\n          <li>This avoids the old mixed-path problems that can appear when moving between Windows and Linux-style environments</li>\n        </ul>\n        <h3>Language and presentation cleanup</h3>\n        <p>The fork also includes a broader presentation pass to make the mod read more cleanly in normal use.</p>\n        <ul>\n          <li>English text has been cleaned up across keybinds, menus, HUD labels, and item tooltips</li>\n          <li>Weapon, ammo, and grenade-facing text is clearer and more consistent</li>\n          <li>Packaged metadata has been updated to reflect the Wargames edition identity</li>\n        </ul>\n        <h3>Branding and packaged identity</h3>\n        <p>The mod is packaged and presented as <strong>Flan's Mod Ultimate-R Wargames Edition</strong>, with updated metadata, Wargames branding, and project-facing information in the shipped mod resources.</p>\n        <div class=\"callout\">\n          <strong>Why this page matters</strong>\n          <p>This is not just a renamed FMUR build. The Wargames edition is part of a larger protected multiplayer stack, and its main value is that core combat systems now behave correctly inside WGCore-controlled territory, war, and protection rules.</p>\n        </div>\n      ",
+  body: `
+        <h3>Layered structure</h3>
+        <p>This mod exists as a layered evolution rather than a single standalone system:</p>
+        <ul>
+          <li><strong>Flan's Mod Plus Ultimate</strong> — base platform</li>
+          <li><strong>FMUR (Reloaded / Reforged)</strong> — stability, fixes, and combat improvements</li>
+          <li><strong>Wargames Edition</strong> — integration into WGCore and multiplayer rule systems</li>
+        </ul>
+
+        <h3>FMUR (Reloaded / Reforged layer)</h3>
+        <p>The FMUR layer introduces major improvements over the base Flan's Mod platform:</p>
+        <ul>
+          <li>Improved gun handling and recoil systems</li>
+          <li>More stable networking and entity behaviour</li>
+          <li>Better vehicle handling and synchronization</li>
+          <li>General bug fixes and performance improvements</li>
+        </ul>
+
+        <h3>Wargames Edition layer</h3>
+        <p>The Wargames Edition builds on FMUR and focuses specifically on integration with WGCore.</p>
+
+        <h4>WGCore integration</h4>
+        <ul>
+          <li>Central integration layer via <code>com.flansmod.common.wgc.Integrations</code></li>
+          <li>All damage routed through WGCore validation</li>
+          <li>Explosion decisions handled by WGCore</li>
+        </ul>
+
+        <h4>Combat behaviour</h4>
+        <ul>
+          <li>Bullet damage respects territory protection</li>
+          <li>Melee damage follows the same validation path</li>
+          <li>Grenade and flash effects are permission-checked</li>
+        </ul>
+
+        <h4>Explosion system</h4>
+        <ul>
+          <li>Explosion attribution added</li>
+          <li>Terrain damage controlled per territory rules</li>
+          <li>Entity damage validated per-target</li>
+        </ul>
+
+        <h4>Vehicle interaction</h4>
+        <ul>
+          <li>Collision damage validated through WGCore</li>
+          <li>Prevents bypass of protection systems</li>
+        </ul>
+
+        <h4>Technical fixes</h4>
+        <ul>
+          <li>Cross-platform player stats handling fix</li>
+          <li>Legacy stats migration support</li>
+        </ul>
+
+        <h3>Summary</h3>
+        <p>The Wargames Edition does not replace FMUR functionality, but ensures it behaves correctly within a protected, territory-based multiplayer environment.</p>
+      `,
   resources: [
     {
-      title: "Custom mods index",
-      text: "Return to the custom stack index page.",
-      url: "#custom-mods",
-      label: "Back to custom mods"
-    },
-    {
-      title: "WGCore overview",
-      text: "Read the main WGCore page for the broader territory, war, and protection framework this fork integrates with.",
-      url: "#wgcore",
-      label: "Open WGCore page"
+      title: "Base Flan's Mod",
+      text: "Understand the base system.",
+      url: "#flans",
+      label: "Open Flan's Mod page"
     }
   ],
   videos: [],
   history: [
     {
       date: "2026-04-07",
-      text: "Expanded the FMUR page with WGCore integration, explosion handling, vehicle interaction, stats migration, and Wargames edition branding details."
+      text: "Rewritten to reflect layered architecture: Flan's base → FMUR → WDG Edition."
     }
   ]
 };
