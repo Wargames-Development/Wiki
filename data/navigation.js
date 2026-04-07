@@ -74,9 +74,14 @@ window.WIKI_NAVIGATION = [
         sectionId: "fmur-group",
         status: "live",
         visible: true,
-        defaultExpanded: false,
+        defaultExpanded: true,
         children: [
-          { id: "fmur", label: "Overview", status: "live", visible: true }
+          { id: "flans", label: "Base mod foundation", status: "reference", visible: true },
+          { id: "fmur", label: "FMUR overview", status: "live", visible: true },
+          { id: "fmur-combat", label: "Combat systems", status: "live", visible: true },
+          { id: "fmur-vehicles", label: "Vehicles & driveables", status: "live", visible: true },
+          { id: "fmur-wgcore", label: "WGCore integration", status: "live", visible: true },
+          { id: "fmur-systems", label: "Technical & presentation", status: "live", visible: true }
         ]
       },
       {
