@@ -55,6 +55,12 @@ window.WARGAMES_WIKI = {
       items: [
         { id: 'wgcore', label: 'WGCore overview', status: 'live', visible: true },
         { id: 'wgcore-commands', label: 'WGCore command reference', status: 'live', visible: true },
+        { id: 'wgevents', label: 'WGEvents', status: 'live', visible: true },
+        { id: 'mcheli', label: 'MCHeli-R Wargames Edition', status: 'live', visible: true },
+        { id: 'fmur', label: 'Flan\'s Mod Ultimate-R Wargames Edition', status: 'live', visible: true },
+        { id: 'ntm-space', label: 'NTM: Space', status: 'live', visible: true },
+        { id: 'foliage-plus', label: 'Foliage+', status: 'live', visible: true },
+        { id: 'hitmarkerplus', label: 'HitmarkerPlus', status: 'live', visible: true },
         { id: 'custom-mods', label: 'Custom mods and forks', status: 'live', visible: true },
         { id: 'modpack', label: 'Modpack overview', status: 'updating', visible: true },
       ],
@@ -64,7 +70,6 @@ window.WARGAMES_WIKI = {
       items: [
         { id: 'release-notes', label: 'Release notes', status: 'live', visible: true },
         { id: 'faq', label: 'FAQ', status: 'live', visible: true },
-        { id: 'wgevents', label: 'WGEvents', status: 'hidden', visible: false },
       ],
     },
   ],
@@ -380,39 +385,75 @@ window.WARGAMES_WIKI = {
     },
     'custom-mods': {
       title: 'Custom mods and forks',
-      summary: 'A first-pass reference page for the Wargames-specific custom mods and forks currently represented in the uploaded source archives.',
-      version: 'Documentation pass 1',
+      summary: 'An index page for the Wargames-specific mods and forks currently represented in the uploaded source archives.',
+      version: 'Documentation pass 2',
       releaseState: 'Live',
       lastUpdated: '2026-04-07',
       needsUpdate: false,
       body: `
-        <p>Wargames is not built only from off-the-shelf public mods. A large part of the pack identity comes from the custom forks and support mods maintained by the Wargames Development Group.</p>
-        <h3>Currently documented custom stack</h3>
+        <p>Wargames relies on a custom code stack, not just a normal public modpack list. The mods below are the Wargames-specific projects and forks currently represented in the uploaded source archives.</p>
+        <h3>Custom stack now split into individual wiki pages</h3>
         <ul>
-          <li><strong>WGCore</strong> — the custom faction, territory, war, protection, and integration backbone</li>
-          <li><strong>MCHeli-R Wargames Edition</strong> — a Wargames fork of MCHeli-Reforged for vehicle and combat use</li>
-          <li><strong>Flan's Mod Ultimate-R Wargames Edition</strong> — the Wargames fork of FMUR / Flan's Mod Ultimate Reforged</li>
-          <li><strong>NTM: Space</strong> — the HBM Space branch present in the uploaded source</li>
-          <li><strong>WGEvents</strong> — a separate Wargames project focused on event and minigame-style systems</li>
-          <li><strong>Foliage+</strong> — passable leaves, slowdown, and loud rustling for anti-stealth foliage interaction</li>
-          <li><strong>HitmarkerPlus</strong> — a lightweight hitmarker sound add-on for Flan's weapon damage</li>
-        </ul>
-        <h3>Quick notes</h3>
-        <ul>
-          <li><strong>WGCore</strong> currently shows as version <code>1.0.0_X138-release</code> in the uploaded build resources</li>
-          <li><strong>MCHeli-R Wargames Edition</strong> uses the uploaded gradle version context <code>1.8.1_X25-dev</code></li>
-          <li><strong>FMUR</strong> uses the uploaded gradle version context <code>1.58.0_X9</code></li>
-          <li><strong>Foliage+</strong> uses the uploaded release context <code>1.0.0_X11-release</code></li>
+          <li><strong>WGCore</strong> — the faction, territory, war, protection, and integration backbone</li>
+          <li><strong>WGEvents</strong> — a separate event-server mod for match flow, spawns, voting, and gamemode automation</li>
+          <li><strong>MCHeli-R Wargames Edition</strong> — the Wargames vehicle and aircraft fork built from MCHeli-Reforged</li>
+          <li><strong>Flan's Mod Ultimate-R Wargames Edition</strong> — the Wargames infantry and weapon fork built from FMUR</li>
+          <li><strong>NTM: Space</strong> — the HBM Space branch used in the Wargames stack</li>
+          <li><strong>Foliage+</strong> — passable leaves, slowdown, and rustling behaviour for foliage interaction</li>
+          <li><strong>HitmarkerPlus</strong> — a lightweight hitmarker feedback mod for Flan's weapon damage</li>
         </ul>
         <div class="callout">
-          <strong>Important</strong>
-          <p>This is a curated Wargames-specific list, not a finished full modpack dump. The complete pack breakdown can be added later once you decide how much detail you want to expose to players.</p>
+          <strong>Documentation note</strong>
+          <p>This page is now an index rather than the main writeup. Each custom project should have its own page so players can find the relevant information without digging through one giant mixed summary.</p>
         </div>
       `,
-      resources: [],
+      resources: [
+        {
+          title: 'WGCore',
+          text: 'The main Wargames backbone mod.',
+          url: '#wgcore',
+          label: 'Open WGCore page',
+        },
+        {
+          title: 'WGEvents',
+          text: 'The separate Wargames event-server mod.',
+          url: '#wgevents',
+          label: 'Open WGEvents page',
+        },
+        {
+          title: 'MCHeli-R Wargames Edition',
+          text: 'The Wargames vehicle and aircraft fork.',
+          url: '#mcheli',
+          label: 'Open MCHeli page',
+        },
+        {
+          title: 'Flan\'s Mod Ultimate-R Wargames Edition',
+          text: 'The Wargames FMUR fork.',
+          url: '#fmur',
+          label: 'Open FMUR page',
+        },
+        {
+          title: 'NTM: Space',
+          text: 'The HBM Space branch page.',
+          url: '#ntm-space',
+          label: 'Open NTM: Space page',
+        },
+        {
+          title: 'Foliage+',
+          text: 'The foliage interaction support mod.',
+          url: '#foliage-plus',
+          label: 'Open Foliage+ page',
+        },
+        {
+          title: 'HitmarkerPlus',
+          text: 'The hitmarker feedback support mod.',
+          url: '#hitmarkerplus',
+          label: 'Open HitmarkerPlus page',
+        },
+      ],
       videos: [],
       history: [
-        { date: '2026-04-07', text: 'Added the first custom-mod stack reference page using the uploaded source archives as the basis.' },
+        { date: '2026-04-07', text: 'Converted the custom-mods page into an index and split the uploaded custom projects into separate wiki pages.' },
       ],
     },
     modpack: {
@@ -499,19 +540,213 @@ window.WARGAMES_WIKI = {
     },
     wgevents: {
       title: 'WGEvents',
-      summary: 'Hidden placeholder page reserved for future event-server documentation.',
-      version: 'WGEvents build X26 context',
-      releaseState: 'Hidden',
+      summary: 'A separate Wargames mod focused on event automation, match flow, spawns, voting, and gamemode control.',
+      version: 'WGEvents source build X26 context',
+      releaseState: 'Live',
       lastUpdated: '2026-04-07',
-      needsUpdate: true,
-      updateMessage: 'This page is intentionally hidden from navigation until WGEvents documentation is ready for public release.',
+      needsUpdate: false,
+      updateMessage: '',
       body: `
-        <p>WGEvents is a separate Wargames project focused on event and minigame-style automation. This page is already scaffolded so it can be published later without redesigning the wiki structure.</p>
+        <p><strong>WGEvents</strong> is a separate Wargames mod aimed at event-style gameplay rather than the main survival territory stack. The uploaded source shows a structure built around match flow, spawn handling, voting, and gamemode logic.</p>
+        <h3>What is visible in the uploaded source</h3>
+        <ul>
+          <li><strong>Gamemode support</strong> through implementations such as <code>ModeFFA</code> and <code>ModeTDM</code></li>
+          <li><strong>Match flow</strong> through services and models such as <code>MatchState</code>, <code>MatchScore</code>, and <code>MatchStatusFormatter</code></li>
+          <li><strong>Spawn systems</strong> through <code>SpawnService</code>, <code>SpawnStore</code>, and <code>SpawnZone</code></li>
+          <li><strong>Voting systems</strong> through <code>VotingService</code></li>
+          <li><strong>Player-state handlers</strong> for things like combat lock, freeze behaviour, build lock, idle logic, and lifecycle management</li>
+        </ul>
+        <h3>What this means in practice</h3>
+        <p>WGEvents is not just a generic utility mod. It is a dedicated event-server framework for running controlled match-based gameplay with spawn logic, team or free-for-all modes, and server-side restrictions that help event rounds run cleanly.</p>
+        <div class="callout">
+          <strong>How it differs from WGCore</strong>
+          <p>WGCore is the persistent territory and war backbone for the survival environment. WGEvents is a separate event-oriented system built around rounds, spawns, match states, and minigame-style automation.</p>
+        </div>
       `,
-      resources: [],
+      resources: [
+        {
+          title: 'Custom mods index',
+          text: 'Return to the custom stack index page.',
+          url: '#custom-mods',
+          label: 'Back to custom mods',
+        },
+      ],
       videos: [],
       history: [
-        { date: '2026-04-07', text: 'Hidden placeholder page prepared for future WGEvents documentation.' },
+        { date: '2026-04-07', text: 'Replaced the hidden WGEvents placeholder with a real page based on the uploaded WGEvents source structure.' },
+      ],
+    },
+    mcheli: {
+      title: 'MCHeli-R Wargames Edition',
+      summary: 'The Wargames fork of MCHeli-Reforged, used for aircraft, vehicles, and related combat systems.',
+      version: 'MCHeli source build 1.8.1_X25 context',
+      releaseState: 'Live',
+      lastUpdated: '2026-04-07',
+      needsUpdate: false,
+      updateMessage: '',
+      body: `
+        <p><strong>MCHeli-R Wargames Edition</strong> is the Wargames fork of MCHeli-Reforged. The uploaded source is a large aircraft and vehicle codebase, with Wargames-specific work layered on top for server use and integration.</p>
+        <h3>What is visible in the uploaded source and README</h3>
+        <ul>
+          <li>Aircraft and vehicle systems through the normal MCHeli vehicle stack</li>
+          <li>Radar, IR, and lock-related behaviour through classes such as <code>MCH_Radar</code> and related aircraft systems</li>
+          <li>Explosion handling through classes such as <code>MCH_Explosion</code> and packet/effect support</li>
+          <li>Wargames-specific work mentioned in the README around explosions, IR and radar filtering, and tighter server-side behaviour</li>
+        </ul>
+        <h3>Why this matters on Wargames</h3>
+        <p>This fork is not being used as a completely untouched public release. It is one of the major combat pillars of the Wargames stack, and the source shows ongoing work to make aircraft, targeting, and explosion behaviour fit the server's custom ruleset more cleanly.</p>
+        <div class="callout">
+          <strong>Documentation scope</strong>
+          <p>This page is an overview page for now. Vehicle-by-vehicle guides, lock systems, and usage tutorials can be added later once you decide how much player-facing detail you want to expose.</p>
+        </div>
+      `,
+      resources: [
+        {
+          title: 'Custom mods index',
+          text: 'Return to the custom stack index page.',
+          url: '#custom-mods',
+          label: 'Back to custom mods',
+        },
+      ],
+      videos: [],
+      history: [
+        { date: '2026-04-07', text: 'Added a separate MCHeli page based on the uploaded Wargames fork source and README.' },
+      ],
+    },
+    fmur: {
+      title: 'Flan\'s Mod Ultimate-R Wargames Edition',
+      summary: 'The Wargames fork of Flan\'s Mod Ultimate Reforged, used for the pack\'s Flan-based combat content.',
+      version: 'FMUR source 1.58.x context',
+      releaseState: 'Live',
+      lastUpdated: '2026-04-07',
+      needsUpdate: false,
+      updateMessage: '',
+      body: `
+        <p><strong>Flan's Mod Ultimate-R Wargames Edition</strong> is the Wargames fork of FMUR. The uploaded source is a large combat codebase covering guns, hitboxes, player combat events, networking, and broader Flan-style systems.</p>
+        <h3>What is visible in the uploaded source</h3>
+        <ul>
+          <li>Gun and combat events such as reloads, gun fire, bullet hits, soldier death, and revive-related flow</li>
+          <li>Hitbox and damage-related systems through classes such as <code>HitboxHelper</code></li>
+          <li>Packet-heavy multiplayer handling for weapon and vehicle behaviour</li>
+          <li>A Wargames fork identity in the packaged metadata, naming, and source branch structure</li>
+        </ul>
+        <h3>What this means on Wargames</h3>
+        <p>This fork is one of the main infantry-combat pillars of the server. It sits alongside the rest of the Wargames stack rather than acting as a standalone untouched public mod, so the page should be understood as a Wargames-specific fork page rather than a generic Flan's Mod guide.</p>
+        <div class="callout">
+          <strong>Note</strong>
+          <p>The uploaded source shows version-context mismatch between generated build metadata and gradle properties, so this page deliberately uses a broader version label rather than hardcoding one exact public-facing build number.</p>
+        </div>
+      `,
+      resources: [
+        {
+          title: 'Custom mods index',
+          text: 'Return to the custom stack index page.',
+          url: '#custom-mods',
+          label: 'Back to custom mods',
+        },
+      ],
+      videos: [],
+      history: [
+        { date: '2026-04-07', text: 'Added a separate FMUR page based on the uploaded Wargames fork source and packaged metadata.' },
+      ],
+    },
+    'ntm-space': {
+      title: 'NTM: Space',
+      summary: 'The HBM Space branch present in the Wargames source stack.',
+      version: 'HBM Space source context',
+      releaseState: 'Live',
+      lastUpdated: '2026-04-07',
+      needsUpdate: false,
+      updateMessage: '',
+      body: `
+        <p><strong>NTM: Space</strong> is the HBM Space branch represented by the uploaded source archive. Its packaged metadata describes it as a mod that adds weapons, nuclear-themed systems, and space travel.</p>
+        <h3>What is visible in the uploaded source</h3>
+        <ul>
+          <li>A very large content-heavy codebase with weapons, machines, blocks, configuration systems, and world systems</li>
+          <li>Radar and combat-related surfaces through the public API and entity interfaces</li>
+          <li>Broader machinery, explosives, and world-content support through the main HBM-style package structure</li>
+        </ul>
+        <h3>Why this page exists</h3>
+        <p>Even though this is a much bigger and older codebase than some of the smaller Wargames support mods, it is still part of the custom stack you uploaded and should have its own page in the wiki rather than being buried as a one-line bullet elsewhere.</p>
+      `,
+      resources: [
+        {
+          title: 'Custom mods index',
+          text: 'Return to the custom stack index page.',
+          url: '#custom-mods',
+          label: 'Back to custom mods',
+        },
+      ],
+      videos: [],
+      history: [
+        { date: '2026-04-07', text: 'Added a separate NTM: Space page based on the uploaded HBM Space source archive and packaged metadata.' },
+      ],
+    },
+    'foliage-plus': {
+      title: 'Foliage+',
+      summary: 'A lightweight support mod that changes how leaves behave by allowing pass-through movement, slowdown, and rustling.',
+      version: 'Foliage+ source build 1.0.0_X11 context',
+      releaseState: 'Live',
+      lastUpdated: '2026-04-07',
+      needsUpdate: false,
+      updateMessage: '',
+      body: `
+        <p><strong>Foliage+</strong> is a small but very gameplay-relevant Wargames support mod. The uploaded source and README show a system built around changing leaf behaviour so foliage feels like dense cover rather than solid terrain.</p>
+        <h3>What is visible in the uploaded source</h3>
+        <ul>
+          <li>Leaves can become passable instead of acting like solid collision</li>
+          <li>Movement slowdown can be applied while inside foliage</li>
+          <li>Rustling sounds are played while moving through leaves</li>
+          <li>Config options exist for player-only behaviour, all-entity behaviour, and whether players can be fully covered by leaves</li>
+          <li>The mod uses hooks, config, and transformer/coremod pieces rather than only a simple one-file event tweak</li>
+        </ul>
+        <h3>Why it matters</h3>
+        <p>This mod changes how concealment and movement through natural cover feels. On a combat-focused server, that makes it more than just a cosmetic tweak.</p>
+      `,
+      resources: [
+        {
+          title: 'Custom mods index',
+          text: 'Return to the custom stack index page.',
+          url: '#custom-mods',
+          label: 'Back to custom mods',
+        },
+      ],
+      videos: [],
+      history: [
+        { date: '2026-04-07', text: 'Added a separate Foliage+ page based on the uploaded README, config, hooks, and tick-handler source.' },
+      ],
+    },
+    hitmarkerplus: {
+      title: 'HitmarkerPlus',
+      summary: 'A lightweight hitmarker feedback mod for Flan-based weapon damage.',
+      version: 'HitmarkerPlus source 1.0.20 context',
+      releaseState: 'Live',
+      lastUpdated: '2026-04-07',
+      needsUpdate: false,
+      updateMessage: '',
+      body: `
+        <p><strong>HitmarkerPlus</strong> is a focused support mod that adds hitmarker feedback for Flan-based gun damage. The uploaded README and source show both the network side and the client overlay side of the system.</p>
+        <h3>What is visible in the uploaded source</h3>
+        <ul>
+          <li>A server-side hit detection handler that sends feedback packets back to the shooter</li>
+          <li>A dedicated <code>PacketHitmarker</code> network path</li>
+          <li>A client overlay system for rendering the hitmarker feedback</li>
+          <li>Client-only support logic through proxy and overlay registration</li>
+        </ul>
+        <h3>Why it matters</h3>
+        <p>Even though it is much smaller than WGCore, FMUR, or MCHeli, it is still part of the custom feel of the pack because it changes how combat feedback feels in play.</p>
+      `,
+      resources: [
+        {
+          title: 'Custom mods index',
+          text: 'Return to the custom stack index page.',
+          url: '#custom-mods',
+          label: 'Back to custom mods',
+        },
+      ],
+      videos: [],
+      history: [
+        { date: '2026-04-07', text: 'Added a separate HitmarkerPlus page based on the uploaded README, packet flow, and overlay source.' },
       ],
     },
   },
