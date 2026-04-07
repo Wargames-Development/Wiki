@@ -556,3 +556,31 @@ h1 { margin-bottom: 6px; font-size: clamp(1.5rem, 2vw, 2rem); }
   .meta-grid { grid-template-columns: 1fr; width: 100%; }
   .history-item { grid-template-columns: 1fr; }
 }
+
+
+.nav-node.depth-0.has-children {
+  padding: 10px;
+}
+
+.nav-node.depth-0 > .nav-section-row .nav-section-label {
+  font-size: 14px;
+}
+
+.nav-node.depth-1.has-children {
+  background: rgba(255,255,255,0.02);
+  border-color: rgba(255,255,255,0.06);
+}
+
+.nav-node.depth-1.active-branch.has-children {
+  border-color: rgba(57,255,100,0.20);
+  background: rgba(57,255,100,0.04);
+}
+
+.nav-node.depth-1 .nav-section-toggle {
+  font-size: 13px;
+}
+
+.nav-node.depth-1 .nav-children {
+  margin-top: 6px;
+  padding-left: 10px;
+}

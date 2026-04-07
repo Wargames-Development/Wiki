@@ -8,10 +8,10 @@ window.WIKI_PAGE_SCRIPTS = [
   "data/pages/core-gameplay/wgcore.js",
   "data/pages/core-gameplay/wgcore-commands.js",
   "data/pages/custom-mods/custom-mods.js",
-  "data/pages/custom-mods/modpack.js",
+  "data/pages/custom-mods/modpack/modpack.js",
   "data/pages/reference/release-notes.js",
   "data/pages/reference/faq.js",
-  "data/pages/custom-mods/wgevents.js",
+  "data/pages/custom-mods/wgevents/wgevents.js",
   "data/pages/custom-mods/mcheli/mcheli.js",
   "data/pages/custom-mods/mcheli/mcheli-overview.js",
   "data/pages/custom-mods/mcheli/mcheli-combat.js",
@@ -19,12 +19,12 @@ window.WIKI_PAGE_SCRIPTS = [
   "data/pages/custom-mods/mcheli/mcheli-weapons.js",
   "data/pages/custom-mods/mcheli/mcheli-aircraft.js",
   "data/pages/custom-mods/mcheli/mcheli-systems.js",
-  "data/pages/custom-mods/fmur.js",
+  "data/pages/custom-mods/fmur/fmur.js",
   "data/pages/custom-mods/ntm-space/ntm-space.js",
   "data/pages/custom-mods/ntm-space/ntm-space-wdg-overview.js",
   "data/pages/custom-mods/ntm-space/ntm-space-protection.js",
   "data/pages/custom-mods/ntm-space/ntm-space-weapons.js",
   "data/pages/custom-mods/ntm-space/ntm-space-server-impact.js",
-  "data/pages/custom-mods/foliage-plus.js",
-  "data/pages/custom-mods/hitmarkerplus.js"
+  "data/pages/custom-mods/foliage-plus/foliage-plus.js",
+  "data/pages/custom-mods/hitmarkerplus/hitmarkerplus.js"
 ];
