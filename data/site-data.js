@@ -2,20 +2,20 @@ window.WARGAMES_WIKI = {
   site: {
     title: 'Wargames Wiki',
     domain: 'wiki.wargames.host',
-    repositoryUrl: 'https://github.com/Wargames-Development/wargames-wiki',
+    repositoryUrl: 'https://github.com/Wargames-Development/wiki',
     social: {
       discord: {
         label: 'Discord',
-        url: 'https://discord.gg/REPLACE_ME',
-        serverId: 'REPLACE_ME',
+        url: 'https://discord.gg/ZmCJDg8ev7',
+        serverId: '958500212396163083',
       },
       technic: {
         label: 'Technic',
-        url: 'https://www.technicpack.net/modpack/REPLACE_ME',
+        url: 'https://www.technicpack.net/modpack/wargames-release.1994291',
       },
       curseforge: {
         label: 'CurseForge',
-        url: 'https://www.curseforge.com/minecraft/modpacks/REPLACE_ME',
+        url: 'https://www.curseforge.com/minecraft/modpacks/wargames-official',
       },
     },
     status: [
