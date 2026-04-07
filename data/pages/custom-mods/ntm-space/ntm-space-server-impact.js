@@ -1,0 +1,33 @@
+window.WIKI_PAGES = window.WIKI_PAGES || {};
+
+window.WIKI_PAGES["ntm-space-server-impact"] = {
+  title: "Server impact & use cases",
+  summary: "Why HBM Space WDG Edition exists and what multiplayer problems it is intended to solve.",
+  version: "HBM Space WDG Edition docs",
+  releaseState: "Live",
+  lastUpdated: "2026-04-07",
+  needsUpdate: false,
+  updateMessage: "",
+  body: "\n        <p>This fork exists because large-scale HBM-style weapons are difficult to manage on structured multiplayer servers if they do not carry ownership and do not respect protected areas.</p>\n        <h3>Problems this fork addresses</h3>\n        <ul>\n          <li>Anonymous explosives once placed or fired</li>\n          <li>Long-range weapons bypassing territory rules on impact</li>\n          <li>Protected bases being exposed to uncontrolled explosive block damage</li>\n          <li>Radiation, contamination, and EMP effects crossing into protected space without filtering</li>\n          <li>Turrets and launch systems lacking faction-aware behaviour</li>\n        </ul>\n        <h3>Where this matters most</h3>\n        <ul>\n          <li>Faction servers using claims or protected territory</li>\n          <li>Event servers where powerful weapons need to remain usable but controlled</li>\n          <li>Modpacks that want HBM Space systems without fully open-ended griefing</li>\n          <li>Private multiplayer environments that need attribution and predictable conflict rules</li>\n        </ul>\n        <h3>Practical result</h3>\n        <p>The goal is not to remove destructive weapons. It is to make them behave in a controlled, attributable, and protection-aware way so they can still exist inside a structured server environment.</p>\n      ",
+  resources: [
+    {
+      title: "HBM Space WDG Edition overview",
+      text: "Return to the main fork overview.",
+      url: "#ntm-space-wdg-overview",
+      label: "Back to WDG overview"
+    },
+    {
+      title: "Official HBM Space wiki",
+      text: "Use this for standard base-mod progression and content reference.",
+      url: "https://nucleartech.wiki/wiki/NTM:_Space",
+      label: "Open official HBM Space wiki"
+    }
+  ],
+  videos: [],
+  history: [
+    {
+      date: "2026-04-07",
+      text: "Added the HBM Space WDG Edition server impact and use-cases page."
+    }
+  ]
+};

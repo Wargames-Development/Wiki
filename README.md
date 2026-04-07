@@ -98,3 +98,15 @@ Once this is live, start replacing the placeholder text in:
 - `faq`
 
 All content lives in one place: `data/site-data.js`.
+
+
+## Split data architecture
+
+The wiki data layer is now split into small files under `data/`:
+
+- `data/site.js` for site-wide metadata
+- `data/navigation.js` for sidebar groups
+- `data/pages/...` for individual pages grouped by section
+- `data/page-manifest.js` for the ordered page load list
+- `data/site-data.js` as the final aggregator that rebuilds `window.WARGAMES_WIKI`
+- `data/bootstrap.js` to load everything before `app.js` runs
