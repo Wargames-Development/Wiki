@@ -57,6 +57,12 @@ window.WARGAMES_WIKI = {
         { id: 'wgcore-commands', label: 'WGCore command reference', status: 'live', visible: true },
         { id: 'wgevents', label: 'WGEvents', status: 'live', visible: true },
         { id: 'mcheli', label: 'MCHeli-R Wargames Edition', status: 'live', visible: true },
+        { id: 'mcheli-overview', label: 'Overview', status: 'live', visible: true },
+        { id: 'mcheli-combat', label: 'Combat & protection', status: 'live', visible: true },
+        { id: 'mcheli-radar', label: 'Radar & missiles', status: 'live', visible: true },
+        { id: 'mcheli-weapons', label: 'Weapon types', status: 'live', visible: true },
+        { id: 'mcheli-aircraft', label: 'Aircraft guide', status: 'live', visible: true },
+        { id: 'mcheli-systems', label: 'Systems & changes', status: 'live', visible: true },
         { id: 'fmur', label: 'Flan\'s Mod Ultimate-R Wargames Edition', status: 'live', visible: true },
         { id: 'ntm-space', label: 'NTM: Space overview', status: 'live', visible: true },
         { id: 'ntm-space-wdg-overview', label: 'HBM Space WDG Edition overview', status: 'live', visible: true },
@@ -126,6 +132,7 @@ window.WARGAMES_WIKI = {
         { date: '2026-04-07', text: 'Front page rewritten to reflect the real Wargames Survival wiki structure instead of the original generic placeholder text.' },
       ],
     },
+
     installation: {
       title: 'Installation',
       summary: 'A launcher-first setup page for players who just need to get the pack installed and opened.',
@@ -163,6 +170,7 @@ window.WARGAMES_WIKI = {
         { date: '2026-04-07', text: 'Installation page rewritten around the live pack entry points instead of placeholder example text.' },
       ],
     },
+
     'first-steps': {
       title: 'First steps',
       summary: 'A short onboarding page for the first few things a player should understand after joining Wargames.',
@@ -192,6 +200,7 @@ window.WARGAMES_WIKI = {
         { date: '2026-04-07', text: 'First-step guidance rewritten to direct players into the actual custom systems documentation.' },
       ],
     },
+
     factions: {
       title: 'Factions and war',
       summary: 'A player-facing explanation of the territory and war model built around WGCore.',
@@ -239,6 +248,7 @@ window.WARGAMES_WIKI = {
         { date: '2026-04-07', text: 'Added a proper player-facing factions and war overview based on the current WGCore architecture.' },
       ],
     },
+
     combat: {
       title: 'Combat',
       summary: 'Combat in Wargames is shaped by the custom mod stack, territory rules, and server-side integration logic.',
@@ -268,6 +278,7 @@ window.WARGAMES_WIKI = {
         { date: '2026-04-07', text: 'Combat page reframed around the actual custom Wargames stack, but still marked as incomplete.' },
       ],
     },
+
     survival: {
       title: 'Survival systems',
       summary: 'A framework page for survival mechanics, progression, and server-specific rules that still need to be written up properly.',
@@ -292,6 +303,7 @@ window.WARGAMES_WIKI = {
         { date: '2026-04-07', text: 'Survival page kept visible but clearly marked as still under construction.' },
       ],
     },
+
     wgcore: {
       title: 'WGCore overview',
       summary: 'WGCore is the foundational territory, faction, and rules-enforcement mod behind the Wargames server experience for Minecraft 1.7.10.',
@@ -342,6 +354,7 @@ window.WARGAMES_WIKI = {
         { date: '2026-04-07', text: 'Added the first real WGCore wiki page using the uploaded step 138 source and project README as the basis.' },
       ],
     },
+
     'wgcore-commands': {
       title: 'WGCore command reference',
       summary: 'A player-facing command index based on the current /wg and /wgc command roots present in the WGCore source.',
@@ -387,6 +400,7 @@ window.WARGAMES_WIKI = {
         { date: '2026-04-07', text: 'Added the first command index based directly on the registered CommandWG and CommandWGC subcommand trees in the uploaded WGCore source.' },
       ],
     },
+
     'custom-mods': {
       title: 'Custom mods and forks',
       summary: 'An index page for the Wargames-specific mods and forks currently represented in the uploaded source archives.',
@@ -484,6 +498,7 @@ window.WARGAMES_WIKI = {
         { date: '2026-04-07', text: 'Expanded the HBM Space documentation path into a base overview plus dedicated WDG Edition subpages.' },
       ],
     },
+
     modpack: {
       title: 'Modpack overview',
       summary: 'A curated overview page for the Wargames pack rather than a raw dump of every jar.',
@@ -517,6 +532,7 @@ window.WARGAMES_WIKI = {
         { date: '2026-04-07', text: 'Modpack overview rewritten to focus on the custom Wargames stack first, with a later full pack list still planned.' },
       ],
     },
+
     'release-notes': {
       title: 'Release notes',
       summary: 'A player-facing page for site changes and visible documentation milestones.',
@@ -541,6 +557,7 @@ window.WARGAMES_WIKI = {
         { date: '2026-04-07', text: 'Initial GitHub Pages starter shell created for Wargames Survival.' },
       ],
     },
+
     faq: {
       title: 'FAQ',
       summary: 'Quick answers for common questions while the rest of the wiki is still being expanded.',
@@ -566,6 +583,7 @@ window.WARGAMES_WIKI = {
         { date: '2026-04-07', text: 'FAQ updated to match the new code-aligned wiki structure.' },
       ],
     },
+
     wgevents: {
       title: 'WGEvents',
       summary: 'A separate Wargames mod focused on event automation, match flow, spawns, voting, and gamemode control.',
@@ -604,43 +622,176 @@ window.WARGAMES_WIKI = {
         { date: '2026-04-07', text: 'Replaced the hidden WGEvents placeholder with a real page based on the uploaded WGEvents source structure.' },
       ],
     },
+
     mcheli: {
       title: 'MCHeli-R Wargames Edition',
-      summary: 'The Wargames fork of MCHeli-Reforged, used for aircraft, vehicles, and related combat systems.',
-      version: 'MCHeli source build 1.8.1_X25 context',
+      summary: 'Wargames fork of MCHeli-Reforged with combat control, radar extensions, and multiplayer-focused behaviour.',
+      version: '',
       releaseState: 'Live',
       lastUpdated: '2026-04-07',
       needsUpdate: false,
       updateMessage: '',
       body: `
-        <p><strong>MCHeli-R Wargames Edition</strong> is the Wargames fork of MCHeli-Reforged. The uploaded source is a large aircraft and vehicle codebase, with Wargames-specific work layered on top for server use and integration.</p>
-        <h3>What is visible in the uploaded source and README</h3>
+        <p><strong>MCHeli-R Wargames Edition</strong> is a modified version of MCHeli-Reforged used for structured combat gameplay.</p>
+
+        <p>The mod keeps the original vehicle and weapon systems, but introduces server-controlled behaviour, radar improvements, and extended missile systems.</p>
+
+        <h3>Key differences</h3>
         <ul>
-          <li>Aircraft and vehicle systems through the normal MCHeli vehicle stack</li>
-          <li>Radar, IR, and lock-related behaviour through classes such as <code>MCH_Radar</code> and related aircraft systems</li>
-          <li>Explosion handling through classes such as <code>MCH_Explosion</code> and packet/effect support</li>
-          <li>Wargames-specific work mentioned in the README around explosions, IR and radar filtering, and tighter server-side behaviour</li>
+          <li>All combat is validated through WGCore</li>
+          <li>Explosions and damage are not always allowed</li>
+          <li>Radar and missile systems are extended beyond default behaviour</li>
+          <li>Multiplayer stability has been improved</li>
         </ul>
-        <h3>Why this matters on Wargames</h3>
-        <p>This fork is not being used as a completely untouched public release. It is one of the major combat pillars of the Wargames stack, and the source shows ongoing work to make aircraft, targeting, and explosion behaviour fit the server's custom ruleset more cleanly.</p>
+
         <div class="callout">
-          <strong>Documentation scope</strong>
-          <p>This page is an overview page for now. Vehicle-by-vehicle guides, lock systems, and usage tutorials can be added later once you decide how much player-facing detail you want to expose.</p>
+          <strong>Important</strong>
+          <p>If something does not work as expected (e.g. damage blocked), it is usually due to territory rules, not a bug.</p>
         </div>
       `,
-      resources: [
-        {
-          title: 'Custom mods index',
-          text: 'Return to the custom stack index page.',
-          url: '#custom-mods',
-          label: 'Back to custom mods',
-        },
-      ],
-      videos: [],
-      history: [
-        { date: '2026-04-07', text: 'Added a separate MCHeli page based on the uploaded Wargames fork source and README.' },
-      ],
     },
+
+        'mcheli-overview': {
+      title: 'Overview',
+      summary: 'How MCHeli-R Wargames Edition fits into gameplay.',
+      body: `
+        <p>MCHeli provides aircraft, helicopters, and vehicles used in combat.</p>
+
+        <h3>Role in Wargames</h3>
+        <ul>
+          <li>Primary air combat system</li>
+          <li>Used for transport, attack, and reconnaissance</li>
+          <li>Integrated with territory and war systems</li>
+        </ul>
+      `,
+    },
+
+    'mcheli-combat': {
+      title: 'Combat & protection',
+      summary: 'How damage and explosions are controlled.',
+      body: `
+        <p>Combat is controlled by WGCore.</p>
+
+        <h3>Explosion rules</h3>
+        <ul>
+          <li>Block damage can be completely blocked</li>
+          <li>Entity damage can still apply separately</li>
+          <li>Explosions are filtered per action</li>
+        </ul>
+
+        <h3>Damage rules</h3>
+        <ul>
+          <li>No damage in safezones</li>
+          <li>Vehicle damage follows same rules</li>
+          <li>All damage is attributed to a source</li>
+        </ul>
+      `,
+    },
+
+    'mcheli-radar': {
+      title: 'Radar & missiles',
+      summary: 'Radar systems and targeting behaviour.',
+      body: `
+        <h3>Radar</h3>
+        <ul>
+          <li>Reduced clutter from non-relevant entities</li>
+          <li>Improved tracking stability</li>
+          <li>Aircraft-specific radar stats</li>
+        </ul>
+
+        <h3>Missiles</h3>
+        <ul>
+          <li>Supports long-range targeting</li>
+          <li>Improved tracking and guidance</li>
+          <li>Server-side validation</li>
+        </ul>
+      `,
+    },
+
+    'mcheli-weapons': {
+      title: 'Weapon types',
+      summary: 'Guide to weapon systems.',
+      body: `
+        <h3>IR Missiles</h3>
+        <ul>
+          <li>Lock onto heat sources</li>
+          <li>Affected by flares and countermeasures</li>
+          <li>Short to medium range</li>
+        </ul>
+
+        <h3>SARH Missiles</h3>
+        <ul>
+          <li>Require radar lock to guide</li>
+          <li>Lose tracking if lock is broken</li>
+          <li>Effective for long-range engagements</li>
+        </ul>
+
+        <h3>GPS Missiles</h3>
+        <ul>
+          <li>Target coordinates instead of entities</li>
+          <li>Can use JourneyMap waypoints</li>
+          <li>Used for ground strikes</li>
+        </ul>
+
+        <h3>Guns & Rockets</h3>
+        <ul>
+          <li>Unguided weapons</li>
+          <li>Immediate impact weapons</li>
+          <li>No tracking required</li>
+        </ul>
+      `,
+    },
+
+    'mcheli-aircraft': {
+      title: 'Aircraft guide',
+      summary: 'How to operate aircraft.',
+      body: `
+        <h3>General controls</h3>
+        <ul>
+          <li>Use standard MCHeli controls</li>
+          <li>Switch weapons using weapon controls</li>
+          <li>Use radar systems for targeting</li>
+        </ul>
+
+        <h3>Takeoff</h3>
+        <ul>
+          <li>Ensure runway or clear space</li>
+          <li>Avoid obstacles during taxi</li>
+        </ul>
+
+        <h3>Combat use</h3>
+        <ul>
+          <li>Use radar to acquire targets</li>
+          <li>Select correct weapon type</li>
+          <li>Maintain lock for guided weapons</li>
+        </ul>
+      `,
+    },
+
+    'mcheli-systems': {
+      title: 'Systems & changes',
+      summary: 'General behaviour changes.',
+      body: `
+        <h3>Reload system</h3>
+        <ul>
+          <li>Reload persists per weapon</li>
+          <li>Cannot bypass reload</li>
+        </ul>
+
+        <h3>Restrictions</h3>
+        <ul>
+          <li>Tools cannot be used while mounted</li>
+        </ul>
+
+        <h3>Multiplayer</h3>
+        <ul>
+          <li>Improved tracking</li>
+          <li>Reduced desync</li>
+          <li>Version enforcement</li>
+        </ul>
+      `,
+    },
+
     fmur: {
       title: 'Flan\'s Mod Ultimate-R Wargames Edition',
       summary: 'The Wargames fork of Flan\'s Mod Ultimate Reforged, used for the pack\'s Flan-based combat content.',
@@ -678,6 +829,7 @@ window.WARGAMES_WIKI = {
         { date: '2026-04-07', text: 'Added a separate FMUR page based on the uploaded Wargames fork source and packaged metadata.' },
       ],
     },
+
     'ntm-space': {
       title: 'NTM: Space overview',
       summary: 'The base HBM Space branch used by Wargames, with the WDG-specific fork documented separately.',
@@ -748,6 +900,7 @@ window.WARGAMES_WIKI = {
         { date: '2026-04-07', text: 'Reworked the NTM: Space page into a base overview and linked the WDG-specific documentation into dedicated subpages.' },
       ],
     },
+
     'ntm-space-wdg-overview': {
       title: 'HBM Space WDG Edition overview',
       summary: 'A high-level overview of what the WDG fork changes and who it is for.',
@@ -800,6 +953,7 @@ window.WARGAMES_WIKI = {
         { date: '2026-04-07', text: 'Added the dedicated HBM Space WDG Edition overview page.' },
       ],
     },
+
     'ntm-space-protection': {
       title: 'Protection & ownership system',
       summary: 'How HBM Space WDG Edition handles ownership tracking and protection-aware destructive effects.',
@@ -854,6 +1008,7 @@ window.WARGAMES_WIKI = {
         { date: '2026-04-07', text: 'Added the HBM Space WDG Edition protection and ownership page.' },
       ],
     },
+
     'ntm-space-weapons': {
       title: 'Weapon & missile changes',
       summary: 'Gameplay-facing missile, projectile, and turret behaviour changes in HBM Space WDG Edition.',
@@ -904,6 +1059,7 @@ window.WARGAMES_WIKI = {
         { date: '2026-04-07', text: 'Added the HBM Space WDG Edition weapon and missile changes page.' },
       ],
     },
+
     'ntm-space-server-impact': {
       title: 'Server impact & use cases',
       summary: 'Why HBM Space WDG Edition exists and what multiplayer problems it is intended to solve.',
@@ -951,6 +1107,7 @@ window.WARGAMES_WIKI = {
         { date: '2026-04-07', text: 'Added the HBM Space WDG Edition server impact and use-cases page.' },
       ],
     },
+
     'foliage-plus': {
       title: 'Foliage+',
       summary: 'A lightweight support mod that changes how leaves behave by allowing pass-through movement, slowdown, and rustling.',
@@ -985,6 +1142,7 @@ window.WARGAMES_WIKI = {
         { date: '2026-04-07', text: 'Added a separate Foliage+ page based on the uploaded README, config, hooks, and tick-handler source.' },
       ],
     },
+
     hitmarkerplus: {
       title: 'HitmarkerPlus',
       summary: 'A lightweight hitmarker feedback mod for Flan-based weapon damage.',
@@ -1018,5 +1176,6 @@ window.WARGAMES_WIKI = {
         { date: '2026-04-07', text: 'Added a separate HitmarkerPlus page based on the uploaded README, packet flow, and overlay source.' },
       ],
     },
+
   },
 };
