@@ -48,9 +48,16 @@ window.WIKI_NAVIGATION = [
         sectionId: "wgevents-group",
         status: "live",
         visible: true,
-        defaultExpanded: false,
+        defaultExpanded: true,
         children: [
-          { id: "wgevents", label: "Overview", status: "live", visible: true }
+          { id: "wgevents", label: "Overview", status: "live", visible: true },
+          { id: "wgevents-match-flow", label: "Match flow", status: "live", visible: true },
+          { id: "wgevents-gamemodes", label: "Gamemodes", status: "live", visible: true },
+          { id: "wgevents-teams", label: "Teams & scoreboard", status: "live", visible: true },
+          { id: "wgevents-spawns", label: "Spawns & idle lobby", status: "live", visible: true },
+          { id: "wgevents-rewards", label: "Rewards & voting", status: "live", visible: true },
+          { id: "wgevents-commands", label: "Commands", status: "live", visible: true },
+          { id: "wgevents-architecture", label: "Architecture", status: "live", visible: true }
         ]
       },
       {
