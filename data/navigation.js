@@ -103,9 +103,12 @@ window.WIKI_NAVIGATION = [
         sectionId: "foliage-plus-group",
         status: "live",
         visible: true,
-        defaultExpanded: false,
+        defaultExpanded: true,
         children: [
-          { id: "foliage-plus", label: "Overview", status: "live", visible: true }
+          { id: "foliage-plus", label: "Overview", status: "live", visible: true },
+          { id: "foliage-plus-gameplay", label: "Gameplay behaviour", status: "live", visible: true },
+          { id: "foliage-plus-config", label: "Configuration", status: "live", visible: true },
+          { id: "foliage-plus-technical", label: "Technical implementation", status: "live", visible: true }
         ]
       },
       {

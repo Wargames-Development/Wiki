@@ -1,15 +1,59 @@
 window.WIKI_PAGES = window.WIKI_PAGES || {};
 
 window.WIKI_PAGES["foliage-plus"] = {
-  title: "Foliage+",
-  summary: "A lightweight support mod that changes how leaves behave by allowing pass-through movement, slowdown, and rustling.",
+  title: "Foliage+ overview",
+  summary: "A small Wargames-made support mod that turns leaves into usable concealment with movement, slowdown, and audio tradeoffs.",
   version: "Foliage+ source build 1.0.0_X11 context",
   releaseState: "Live",
-  lastUpdated: "2026-04-07",
+  lastUpdated: "2026-04-08",
   needsUpdate: false,
   updateMessage: "",
-  body: "\n        <p><strong>Foliage+</strong> is a small but very gameplay-relevant Wargames support mod. The uploaded source and README show a system built around changing leaf behaviour so foliage feels like dense cover rather than solid terrain.</p>\n        <h3>What is visible in the uploaded source</h3>\n        <ul>\n          <li>Leaves can become passable instead of acting like solid collision</li>\n          <li>Movement slowdown can be applied while inside foliage</li>\n          <li>Rustling sounds are played while moving through leaves</li>\n          <li>Config options exist for player-only behaviour, all-entity behaviour, and whether players can be fully covered by leaves</li>\n          <li>The mod uses hooks, config, and transformer/coremod pieces rather than only a simple one-file event tweak</li>\n        </ul>\n        <h3>Why it matters</h3>\n        <p>This mod changes how concealment and movement through natural cover feels. On a combat-focused server, that makes it more than just a cosmetic tweak.</p>\n      ",
+  body: `
+        <p><strong>Foliage+</strong> is a small original Wargames support mod for Forge 1.7.10. Its purpose is simple: leaf blocks should behave more like dense foliage and less like hard terrain.</p>
+
+        <p>Instead of treating leaves only as visual decoration or awkward solid collision, the mod allows controlled movement through them, optional slowdown while inside them, and loud rustling audio so concealment still carries a gameplay cost.</p>
+
+        <h3>What the mod changes</h3>
+        <ul>
+          <li>Leaf blocks can become pass-through instead of fully solid</li>
+          <li>Entities inside leaves can receive a configurable movement-speed penalty</li>
+          <li>Players moving through leaves trigger a dedicated rustle sound set</li>
+          <li>Servers can choose whether the behaviour applies to players only or to all entities</li>
+          <li>A dense-foliage option can stop players from being fully buried inside two-high leaf columns</li>
+        </ul>
+
+        <div class="callout">
+          <strong>Design goal</strong>
+          <p>Foliage+ is not a decorative content mod. It is a gameplay-support mod aimed at combat and movement balance, especially where bushes, trees, and natural cover would otherwise act like either hard walls or silent hiding spots.</p>
+        </div>
+
+        <h3>How the section is split</h3>
+        <ul>
+          <li><strong>Overview</strong> — what the mod is for and what it changes</li>
+          <li><strong>Gameplay behaviour</strong> — how pass-through leaves, slowdown, and rustling work in practice</li>
+          <li><strong>Configuration</strong> — server options and gameplay tuning controls</li>
+          <li><strong>Technical implementation</strong> — how the mod uses a coremod transformer, hooks, and tick handlers</li>
+        </ul>
+      `,
   resources: [
+    {
+      title: "Gameplay behaviour",
+      text: "Detailed in-game behaviour for pass-through leaves, slowdown, and rustling.",
+      url: "#foliage-plus-gameplay",
+      label: "Open gameplay page"
+    },
+    {
+      title: "Configuration",
+      text: "Server-facing settings and what each one changes.",
+      url: "#foliage-plus-config",
+      label: "Open configuration page"
+    },
+    {
+      title: "Technical implementation",
+      text: "How the mod is built internally using hooks, events, and an ASM transformer.",
+      url: "#foliage-plus-technical",
+      label: "Open technical page"
+    },
     {
       title: "Custom mods index",
       text: "Return to the custom stack index page.",
@@ -20,8 +64,8 @@ window.WIKI_PAGES["foliage-plus"] = {
   videos: [],
   history: [
     {
-      date: "2026-04-07",
-      text: "Added a separate Foliage+ page based on the uploaded README, config, hooks, and tick-handler source."
+      date: "2026-04-08",
+      text: "Expanded Foliage+ from a single short page into a proper multi-page section based on the uploaded source and README." 
     }
   ]
 };

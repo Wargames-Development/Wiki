@@ -31,5 +31,8 @@ window.WIKI_PAGE_SCRIPTS = [
   "data/pages/custom-mods/ntm-space/ntm-space-weapons.js",
   "data/pages/custom-mods/ntm-space/ntm-space-server-impact.js",
   "data/pages/custom-mods/foliage-plus/foliage-plus.js",
+  "data/pages/custom-mods/foliage-plus/foliage-plus-gameplay.js",
+  "data/pages/custom-mods/foliage-plus/foliage-plus-config.js",
+  "data/pages/custom-mods/foliage-plus/foliage-plus-technical.js",
   "data/pages/custom-mods/hitmarkerplus/hitmarkerplus.js"
 ];
