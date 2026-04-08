@@ -10,8 +10,12 @@
   const resourceSection = document.getElementById('resourceSection');
   const videoSection = document.getElementById('videoSection');
   const discordSection = document.getElementById('discordSection');
+
+  const mediaRow = videoSection.parentElement;
+  const lowerRow = historySection.parentElement;
   const siteStatus = document.getElementById('siteStatus');
   const repoLink = document.getElementById('repoLink');
+  const heroPanel = document.getElementById('heroPanel');
   const heroTitle = document.getElementById('heroTitle');
   const heroSummary = document.getElementById('heroSummary');
   const heroPrimary = document.getElementById('heroPrimary');
@@ -105,7 +109,7 @@
     return button;
   }
 
-  function buildBranch(items, currentPageId, depth) {
+  function buildBranch(items, currentPageId, depth, parentKey = 'root') {
     const fragment = document.createDocumentFragment();
 
     items.filter((item) => item.visible !== false).forEach((item, index) => {
@@ -114,7 +118,7 @@
       node.className = `nav-node depth-${depth}${hasChildren ? ' has-children' : ''}${isActiveBranch(item, currentPageId) ? ' active-branch' : ''}`;
 
       if (hasChildren) {
-        const sectionKey = item.sectionId || item.id || `${depth}-${index}-${item.label}`;
+        const sectionKey = item.sectionId || item.id || `${parentKey}/${depth}-${index}-${item.label}`;
         const expanded = toggleState(sectionKey, item.defaultExpanded !== false || isActiveBranch(item, currentPageId));
 
         const row = document.createElement('div');
@@ -148,7 +152,7 @@
         if (expanded) {
           const childWrap = document.createElement('div');
           childWrap.className = 'nav-children';
-          childWrap.appendChild(buildBranch(item.children, currentPageId, depth + 1));
+          childWrap.appendChild(buildBranch(item.children, currentPageId, depth + 1, sectionKey));
           node.appendChild(childWrap);
         }
       } else {
@@ -168,7 +172,10 @@
       wrapper.className = 'nav-group';
 
       const groupKey = `group:${group.title}:${index}`;
-      const groupExpanded = toggleState(groupKey, group.defaultExpanded !== false);
+      const groupExpanded = toggleState(
+        groupKey,
+        group.defaultExpanded !== false || (group.items || []).some((item) => isActiveBranch(item, currentPageId))
+      );
 
       const groupToggle = document.createElement('button');
       groupToggle.type = 'button';
@@ -185,7 +192,7 @@
       if (groupExpanded) {
         const container = document.createElement('div');
         container.className = 'nav-group-items';
-        container.appendChild(buildBranch(group.items || [], currentPageId, 0));
+        container.appendChild(buildBranch(group.items || [], currentPageId, 0, groupKey));
         wrapper.appendChild(container);
       }
 
@@ -194,6 +201,14 @@
   }
 
   function renderBreadcrumbs(pageId) {
+    if (pageId === 'home') {
+      breadcrumbs.innerHTML = '';
+      breadcrumbs.style.display = 'none';
+      return;
+    }
+
+    breadcrumbs.style.display = '';
+
     const entry = pageTree[pageId] || { label: 'Home', trail: ['Start here'] };
     const crumbs = []
       .concat(entry.trail || [])
@@ -206,8 +221,22 @@
     }).join('<span class="breadcrumb-separator">/</span>');
   }
 
+  function toggleSectionVisibility(section, shouldShow) {
+    section.style.display = shouldShow ? '' : 'none';
+  }
+
+  function updateSplitRow(row, sections) {
+    const visibleSections = sections.filter((section) => section.style.display !== 'none');
+    row.style.display = visibleSections.length ? '' : 'none';
+    row.classList.toggle('single-card', visibleSections.length === 1);
+  }
+
   function renderPage(pageId) {
     const page = data.pages[pageId] || data.pages.home;
+    const isHomePage = pageId === 'home';
+
+    heroPanel.style.display = isHomePage ? '' : 'none';
+
     pageTitle.textContent = page.title;
     pageBody.innerHTML = page.body;
 
@@ -235,13 +264,20 @@
     renderVideos(page.videos || []);
     renderHistory(page.history || []);
     renderDiscord();
+
+    updateSplitRow(mediaRow, [videoSection, resourceSection]);
+    updateSplitRow(lowerRow, [historySection, discordSection]);
+
     buildNav(pageId);
     setActiveNav(pageId);
   }
 
   function renderResources(resources) {
-    if (!resources.length) {
-      resourceSection.innerHTML = `<h3 class="section-title">Resources</h3><p class="empty-state">No linked resources have been added to this page yet.</p>`;
+    const hasResources = Array.isArray(resources) && resources.length > 0;
+    toggleSectionVisibility(resourceSection, hasResources);
+
+    if (!hasResources) {
+      resourceSection.innerHTML = '';
       return;
     }
 
@@ -254,8 +290,11 @@
   }
 
   function renderVideos(videos) {
-    if (!videos.length) {
-      videoSection.innerHTML = `<h3 class="section-title">Videos and tutorials</h3><p class="empty-state">Add a YouTube link to this page when you are ready to embed a guide.</p>`;
+    const hasVideos = Array.isArray(videos) && videos.length > 0;
+    toggleSectionVisibility(videoSection, hasVideos);
+
+    if (!hasVideos) {
+      videoSection.innerHTML = '';
       return;
     }
 
@@ -274,11 +313,19 @@
   }
 
   function renderHistory(history) {
-    historySection.innerHTML = `<h3 class="section-title">Version history</h3>${history.length ? history.map((item) => `
+    const hasHistory = Array.isArray(history) && history.length > 0;
+    toggleSectionVisibility(historySection, hasHistory);
+
+    if (!hasHistory) {
+      historySection.innerHTML = '';
+      return;
+    }
+
+    historySection.innerHTML = `<h3 class="section-title">Version history</h3>${history.map((item) => `
       <div class="history-item">
         <div class="history-date">${formatDate(item.date)}</div>
         <div>${item.text}</div>
-      </div>`).join('') : '<p class="empty-state">No history has been recorded yet.</p>'}`;
+      </div>`).join('')}`;
   }
 
   function renderDiscord() {
@@ -286,11 +333,16 @@
     const inviteUrl = data.site.social.discord.url;
     const isConfigured = serverId && serverId !== 'REPLACE_ME';
 
+    toggleSectionVisibility(discordSection, isConfigured);
+
+    if (!isConfigured) {
+      discordSection.innerHTML = '';
+      return;
+    }
+
     discordSection.innerHTML = `<h3 class="section-title">Discord</h3>
-      ${isConfigured
-        ? `<iframe class="discord-frame" src="https://discord.com/widget?id=${serverId}&theme=dark" allowtransparency="true" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-           <p><a class="text-link" href="${inviteUrl}" target="_blank" rel="noreferrer">Open Discord in a new tab</a></p>`
-        : `<p class="empty-state">Add your Discord server ID and invite link in <code>data/site.js</code> to enable the embedded widget here.</p>`}
+      <iframe class="discord-frame" src="https://discord.com/widget?id=${serverId}&theme=dark" allowtransparency="true" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+      <p><a class="text-link" href="${inviteUrl}" target="_blank" rel="noreferrer">Open Discord in a new tab</a></p>
     `;
   }
 

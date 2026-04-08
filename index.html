@@ -16,8 +16,10 @@
       <header class="topbar">
         <div class="brand-block">
           <button id="sidebarToggle" class="icon-button mobile-only" aria-label="Toggle navigation">☰</button>
-          <img src="assets/images/logo.png" alt="Wargames" class="brand-logo" id="brandLogo" />
-          <div>
+          <a href="#home" class="brand-home-link" aria-label="Open home page">
+            <img src="assets/images/logo.png" alt="Wargames" class="brand-logo" id="brandLogo" />
+          </a>
+          <div class="brand-copy">
             <div class="eyebrow">Official community wiki</div>
             <h1>Wargames Wiki</h1>
             <p class="tagline">Starter documentation, guides, tutorials, and release notes for your modpack and servers.</p>
@@ -59,9 +61,8 @@
         </aside>
 
         <main class="content" id="content">
-          <section class="hero-panel">
+          <section class="hero-panel" id="heroPanel">
             <div>
-              <div class="pill">GitHub Pages ready</div>
               <h2 id="heroTitle">Loading…</h2>
               <p id="heroSummary"></p>
             </div>
