@@ -116,9 +116,12 @@ window.WIKI_NAVIGATION = [
         sectionId: "hitmarkerplus-group",
         status: "live",
         visible: true,
-        defaultExpanded: false,
+        defaultExpanded: true,
         children: [
-          { id: "hitmarkerplus", label: "Overview", status: "live", visible: true }
+          { id: "hitmarkerplus", label: "Overview", status: "live", visible: true },
+          { id: "hitmarkerplus-feedback", label: "Feedback behaviour", status: "live", visible: true },
+          { id: "hitmarkerplus-installation", label: "Installation & compatibility", status: "live", visible: true },
+          { id: "hitmarkerplus-technical", label: "Technical implementation", status: "live", visible: true }
         ]
       }
     ]

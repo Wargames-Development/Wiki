@@ -34,5 +34,8 @@ window.WIKI_PAGE_SCRIPTS = [
   "data/pages/custom-mods/foliage-plus/foliage-plus-gameplay.js",
   "data/pages/custom-mods/foliage-plus/foliage-plus-config.js",
   "data/pages/custom-mods/foliage-plus/foliage-plus-technical.js",
-  "data/pages/custom-mods/hitmarkerplus/hitmarkerplus.js"
+  "data/pages/custom-mods/hitmarkerplus/hitmarkerplus.js",
+  "data/pages/custom-mods/hitmarkerplus/hitmarkerplus-feedback.js",
+  "data/pages/custom-mods/hitmarkerplus/hitmarkerplus-installation.js",
+  "data/pages/custom-mods/hitmarkerplus/hitmarkerplus-technical.js"
 ];

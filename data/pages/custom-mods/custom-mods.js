@@ -7,7 +7,7 @@ window.WIKI_PAGES["custom-mods"] = {
   releaseState: "Live",
   lastUpdated: "2026-04-07",
   needsUpdate: false,
-  body: "\n        <p>Wargames relies on a custom code stack, not just a normal public modpack list. The mods below are the Wargames-specific projects and forks currently represented in the uploaded source archives.</p>\n        <h3>Custom stack now split into individual wiki pages</h3>\n        <ul>\n          <li><strong>WGCore</strong> — the faction, territory, war, protection, and integration backbone</li>\n          <li><strong>WGEvents</strong> — a separate event-server mod for match flow, spawns, voting, and gamemode automation</li>\n          <li><strong>MCHeli-R Wargames Edition</strong> — the Wargames vehicle and aircraft fork built from MCHeli-Reforged</li>\n          <li><strong>Flan's Mod Ultimate-R Wargames Edition</strong> — the Wargames Flan lineage section, now split into a base Flan foundation page plus dedicated FMUR subpages</li>\n          <li><strong>HBM Space WDG Edition</strong> — a systems-focused fork of the HBM Space branch with ownership tracking, protection-aware weapons, and missile behaviour improvements</li>\n          <li><strong>Foliage+</strong> — an original Wargames support mod that turns leaves into interactive foliage with pass-through movement, slowdown, and rustling tradeoffs</li>\n          <li><strong>HitmarkerPlus</strong> — a lightweight hitmarker feedback mod for Flan's weapon damage</li>\n        </ul>\n        <div class=\"callout\">\n          <strong>Documentation note</strong>\n          <p>The HBM Space fork now has a general overview page and several focused subpages so the WDG-specific changes are documented separately from the base HBM Space progression and content.</p>\n        </div>\n      ",
+  body: "\n        <p>Wargames relies on a custom code stack, not just a normal public modpack list. The mods below are the Wargames-specific projects and forks currently represented in the uploaded source archives.</p>\n        <h3>Custom stack now split into individual wiki pages</h3>\n        <ul>\n          <li><strong>WGCore</strong> — the faction, territory, war, protection, and integration backbone</li>\n          <li><strong>WGEvents</strong> — a separate event-server mod for match flow, spawns, voting, and gamemode automation</li>\n          <li><strong>MCHeli-R Wargames Edition</strong> — the Wargames vehicle and aircraft fork built from MCHeli-Reforged</li>\n          <li><strong>Flan's Mod Ultimate-R Wargames Edition</strong> — the Wargames Flan lineage section, now split into a base Flan foundation page plus dedicated FMUR subpages</li>\n          <li><strong>HBM Space WDG Edition</strong> — a systems-focused fork of the HBM Space branch with ownership tracking, protection-aware weapons, and missile behaviour improvements</li>\n          <li><strong>Foliage+</strong> — an original Wargames support mod that turns leaves into interactive foliage with pass-through movement, slowdown, and rustling tradeoffs</li>\n          <li><strong>HitmarkerPlus</strong> — a lightweight combat feedback support mod for Flan-based weapon damage, now split into overview, behaviour, setup, and technical pages</li>\n        </ul>\n        <div class=\"callout\">\n          <strong>Documentation note</strong>\n          <p>The HBM Space fork now has a general overview page and several focused subpages so the WDG-specific changes are documented separately from the base HBM Space progression and content.</p>\n        </div>\n      ",
   resources: [
     {
       title: "WGCore",
@@ -94,10 +94,28 @@ window.WIKI_PAGES["custom-mods"] = {
       label: "Open technical page"
     },
     {
-      title: "HitmarkerPlus",
-      text: "The hitmarker feedback support mod.",
+      title: "HitmarkerPlus overview",
+      text: "The main overview page for the hitmarker feedback support mod.",
       url: "#hitmarkerplus",
-      label: "Open HitmarkerPlus page"
+      label: "Open overview"
+    },
+    {
+      title: "HitmarkerPlus feedback behaviour",
+      text: "How hit detection, overlay timing, and audio feedback behave in play.",
+      url: "#hitmarkerplus-feedback",
+      label: "Open feedback page"
+    },
+    {
+      title: "HitmarkerPlus installation & compatibility",
+      text: "What the mod requires and how it is intended to be deployed on client and server.",
+      url: "#hitmarkerplus-installation",
+      label: "Open installation page"
+    },
+    {
+      title: "HitmarkerPlus technical implementation",
+      text: "Packet flow, event hooks, client rendering, and asset details.",
+      url: "#hitmarkerplus-technical",
+      label: "Open technical page"
     }
   ],
   videos: [],
