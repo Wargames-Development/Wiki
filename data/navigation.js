@@ -40,7 +40,16 @@ window.WIKI_NAVIGATION = [
         defaultExpanded: true,
         children: [
           { id: "wgcore", label: "Overview", status: "live", visible: true },
-          { id: "wgcore-commands", label: "Command reference", status: "live", visible: true }
+          { id: "wgcore-factions", label: "Factions", status: "live", visible: true },
+          { id: "wgcore-territory", label: "Territory & claims", status: "live", visible: true },
+          { id: "wgcore-flags", label: "Flags", status: "live", visible: true },
+          { id: "wgcore-war", label: "War system", status: "live", visible: true },
+          { id: "wgcore-fobs", label: "FOB system", status: "live", visible: true },
+          { id: "wgcore-control", label: "Control & decay", status: "live", visible: true },
+          { id: "wgcore-protection", label: "Protection rules", status: "live", visible: true },
+          { id: "wgcore-commands", label: "Command reference", status: "live", visible: true },
+          { id: "wgcore-configuration", label: "Configuration", status: "live", visible: true },
+          { id: "wgcore-api", label: "Integration API", status: "live", visible: true }
         ]
       },
       {

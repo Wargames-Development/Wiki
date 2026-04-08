@@ -110,3 +110,8 @@ The wiki data layer is now split into small files under `data/`:
 - `data/page-manifest.js` for the ordered page load list
 - `data/site-data.js` as the final aggregator that rebuilds `window.WARGAMES_WIKI`
 - `data/bootstrap.js` to load everything before `app.js` runs
+
+
+## WGCore
+
+WGCore documentation pages are included under `data/pages/custom-mods/wgcore/`.
