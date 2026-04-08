@@ -8,7 +8,7 @@ window.WIKI_PAGES["flans"] = {
   lastUpdated: "2026-04-07",
   needsUpdate: false,
   body: `
-        <p><strong>Flan's Mod Plus Ultimate</strong>, often referred to in this stack as the <strong>Ultimate</strong> or <strong>Stability Edition</strong>, is the base platform that the later FMUR and Wargames work is built on.</p>
+<p><strong>Flan's Mod Plus Ultimate</strong>, often referred to in this stack as the <strong>Ultimate</strong> or <strong>Stability Edition</strong>, is the base platform that the later FMUR and Wargames work is built on.</p>
 
         <div class="callout">
           <strong>Documentation note</strong>
@@ -41,7 +41,7 @@ window.WIKI_PAGES["flans"] = {
           <li><strong>FMUR overview</strong> explains the later Reloaded / Reforged layer built on top of it</li>
           <li><strong>WGCore integration</strong> explains the smaller Wargames-specific changes added after FMUR</li>
         </ul>
-      `,
+  `.trim(),
   resources: [
     {
       title: "Upstream Flan's Mod Plus Ultimate wiki",

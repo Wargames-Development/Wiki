@@ -9,7 +9,7 @@ window.WIKI_PAGES["fmur"] = {
   needsUpdate: false,
   updateMessage: "",
   body: `
-        <p><strong>Flan's Mod Ultimate-R</strong> is the intermediate layer between the broader Flan's Mod Plus Ultimate foundation and the smaller Wargames-specific changes used on top of it.</p>
+<p><strong>Flan's Mod Ultimate-R</strong> is the intermediate layer between the broader Flan's Mod Plus Ultimate foundation and the smaller Wargames-specific changes used on top of it.</p>
 
         <h3>Lineage</h3>
         <ul>
@@ -41,7 +41,7 @@ window.WIKI_PAGES["fmur"] = {
           <li><strong>WGCore integration</strong> — the Wargames-specific protection and rule layer</li>
           <li><strong>Technical & presentation changes</strong> — stats handling, localisation, branding, and packaging</li>
         </ul>
-      `,
+  `.trim(),
   resources: [
     {
       title: "Flan's Ultimate base page",

@@ -9,7 +9,7 @@ window.WIKI_PAGES["wgevents-rewards"] = {
   needsUpdate: false,
   updateMessage: "",
   body: `
-        <h3>Rewards system</h3>
+<h3>Rewards system</h3>
         <p>WGEvents includes a dedicated <code>RewardsService</code> backed by <code>config/wgevents/rewards.yml</code>. This is not hardcoded into a gamemode class; it is a separate automation layer that can react to kills, points, streaks, and match-start events.</p>
 
         <h3>What rewards.yml supports</h3>
@@ -58,7 +58,7 @@ window.WIKI_PAGES["wgevents-rewards"] = {
           <strong>Practical result</strong>
           <p>Taken together, the rewards and voting layers mean WGEvents already has a real event-server automation backbone: players can decide the next mode publicly, and the server can respond automatically to match actions without hardcoding all outcomes into the gamemode classes.</p>
         </div>
-      `,
+  `.trim(),
   resources: [
     {
       title: "Commands",

@@ -9,7 +9,7 @@ window.WIKI_PAGES["hitmarkerplus-installation"] = {
   needsUpdate: false,
   updateMessage: "",
   body: `
-        <p>HitmarkerPlus is a standard Forge 1.7.10 mod with a small client-side presentation layer and a server-side hit detection hook. The uploaded source and README both target the same core environment.</p>
+<p>HitmarkerPlus is a standard Forge 1.7.10 mod with a small client-side presentation layer and a server-side hit detection hook. The uploaded source and README both target the same core environment.</p>
 
         <h3>Platform target</h3>
         <ul>
@@ -41,7 +41,7 @@ window.WIKI_PAGES["hitmarkerplus-installation"] = {
           <strong>Compatibility boundary</strong>
           <p>HitmarkerPlus is tightly scoped. It is not a universal damage-feedback framework. In its current source state, it is intentionally tied to Flan bullet entities and does not try to cover melee, explosions, missiles, or other external weapon systems.</p>
         </div>
-      `,
+  `.trim(),
   resources: [
     {
       title: "Feedback behaviour",

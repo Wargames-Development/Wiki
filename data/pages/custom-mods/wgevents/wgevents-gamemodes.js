@@ -9,7 +9,7 @@ window.WIKI_PAGES["wgevents-gamemodes"] = {
   needsUpdate: false,
   updateMessage: "",
   body: `
-        <p>WGEvents uses an <code>IGameMode</code> interface and a small manager layer to delegate live-match behaviour to the active mode. The current source clearly contains two concrete modes: <strong>TDM</strong> and <strong>FFA</strong>.</p>
+<p>WGEvents uses an <code>IGameMode</code> interface and a small manager layer to delegate live-match behaviour to the active mode. The current source clearly contains two concrete modes: <strong>TDM</strong> and <strong>FFA</strong>.</p>
 
         <h3>Team Deathmatch</h3>
         <p><code>ModeTDM</code> is the team-based scoring mode currently visible in the source. It includes:</p>
@@ -53,7 +53,7 @@ window.WIKI_PAGES["wgevents-gamemodes"] = {
           <strong>Current implementation note</strong>
           <p>The team registry can store more than two teams, but the active team-match logic documented in the source is still fundamentally a two-team flow. The current balancing and validation path uses the first two registered teams for match play.</p>
         </div>
-      `,
+  `.trim(),
   resources: [
     {
       title: "Match flow",

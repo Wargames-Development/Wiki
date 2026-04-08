@@ -8,7 +8,7 @@ window.WIKI_PAGES["fmur-vehicles"] = {
   lastUpdated: "2026-04-07",
   needsUpdate: false,
   body: `
-        <p>The broader Flan and FMUR lineage includes <strong>driveables</strong> such as aircraft and ground vehicles, along with supporting driveable inventory, fuel, seats, mounted weapons, and client-side vehicle presentation systems.</p>
+<p>The broader Flan and FMUR lineage includes <strong>driveables</strong> such as aircraft and ground vehicles, along with supporting driveable inventory, fuel, seats, mounted weapons, and client-side vehicle presentation systems.</p>
 
         <h3>Vehicle role in the stack</h3>
         <ul>
@@ -33,7 +33,7 @@ window.WIKI_PAGES["fmur-vehicles"] = {
           <li>Acting player resolution attempts to attribute vehicle-caused damage sensibly</li>
           <li>This prevents protected-area bypass simply because the damage came from a driveable interaction instead of a direct weapon hit</li>
         </ul>
-      `,
+  `.trim(),
   resources: [
     {
       title: "FMUR overview",

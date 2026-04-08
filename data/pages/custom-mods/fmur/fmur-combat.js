@@ -8,7 +8,7 @@ window.WIKI_PAGES["fmur-combat"] = {
   lastUpdated: "2026-04-07",
   needsUpdate: false,
   body: `
-        <p>The <strong>combat identity</strong> of the FMUR line still comes from the broader Flan weapon framework, but it is shaped further by later Ultimate and Reloaded/Reforged behaviour.</p>
+<p>The <strong>combat identity</strong> of the FMUR line still comes from the broader Flan weapon framework, but it is shaped further by later Ultimate and Reloaded/Reforged behaviour.</p>
 
         <h3>Core infantry systems in this lineage</h3>
         <ul>
@@ -33,7 +33,7 @@ window.WIKI_PAGES["fmur-combat"] = {
           <strong>Practical reading rule</strong>
           <p>If you are documenting how a gun feels, reloads, recoils, or supports attachments, you are usually describing the Flan/FMUR lineage. If you are documenting whether a hit is allowed in a protected area, you are describing the Wargames WGCore layer.</p>
         </div>
-      `,
+  `.trim(),
   resources: [
     {
       title: "FMUR overview",

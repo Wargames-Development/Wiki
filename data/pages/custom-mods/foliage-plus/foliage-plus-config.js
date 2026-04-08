@@ -9,7 +9,7 @@ window.WIKI_PAGES["foliage-plus-config"] = {
   needsUpdate: false,
   updateMessage: "",
   body: `
-        <p>Foliage+ stores its settings in a Forge configuration file at <strong>/config/foliage-plus/foliage-plus.cfg</strong>. The config is small, but each option directly changes how foliage behaves in play.</p>
+<p>Foliage+ stores its settings in a Forge configuration file at <strong>/config/foliage-plus/foliage-plus.cfg</strong>. The config is small, but each option directly changes how foliage behaves in play.</p>
 
         <h3>Available settings</h3>
         <ul>
@@ -34,7 +34,7 @@ window.WIKI_PAGES["foliage-plus-config"] = {
           <strong>Practical tuning</strong>
           <p>If the goal is to make foliage usable but not abusable, a moderate slowdown combined with rustling and <strong>allowFullCover=false</strong> gives the clearest tradeoff.</p>
         </div>
-      `,
+  `.trim(),
   resources: [
     {
       title: "Gameplay behaviour",
@@ -53,7 +53,7 @@ window.WIKI_PAGES["foliage-plus-config"] = {
   history: [
     {
       date: "2026-04-08",
-      text: "Added a dedicated configuration page based on FoliagePlusConfig and the uploaded README." 
+      text: "Added a dedicated configuration page based on FoliagePlusConfig and the uploaded README."
     }
   ]
 };

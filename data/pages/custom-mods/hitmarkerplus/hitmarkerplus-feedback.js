@@ -9,7 +9,7 @@ window.WIKI_PAGES["hitmarkerplus-feedback"] = {
   needsUpdate: false,
   updateMessage: "",
   body: `
-        <p>HitmarkerPlus is built around a simple feedback loop: a valid server-side bullet hit occurs, the shooter is identified, a client packet is sent back to that shooter, and the shooter receives immediate feedback.</p>
+<p>HitmarkerPlus is built around a simple feedback loop: a valid server-side bullet hit occurs, the shooter is identified, a client packet is sent back to that shooter, and the shooter receives immediate feedback.</p>
 
         <h3>What counts as a hit</h3>
         <p>The source listens to <strong>LivingHurtEvent</strong> on the server. It then checks the damage source and only continues if the source entity is a <strong>com.flansmod.common.guns.EntityBullet</strong>.</p>
@@ -43,7 +43,7 @@ window.WIKI_PAGES["hitmarkerplus-feedback"] = {
           <strong>Gameplay effect</strong>
           <p>The mod does not make weapons stronger or hits easier to land. Its value is clarity. The shooter gets instant confirmation that a Flan bullet connected, which makes firefights easier to read without changing the underlying damage model.</p>
         </div>
-      `,
+  `.trim(),
   resources: [
     {
       title: "Installation & compatibility",

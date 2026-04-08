@@ -9,7 +9,7 @@ window.WIKI_PAGES["wgevents-spawns"] = {
   needsUpdate: false,
   updateMessage: "",
   body: `
-        <p>WGEvents has two different spawn systems in the current source: one for team modes and one for FFA. On top of that, it has a separate idle destination system used whenever no match is running.</p>
+<p>WGEvents has two different spawn systems in the current source: one for team modes and one for FFA. On top of that, it has a separate idle destination system used whenever no match is running.</p>
 
         <h3>Team-mode spawn zones</h3>
         <p><code>SpawnStore</code> stores a <code>SpawnZone</code> per team alias. Each zone can store:</p>
@@ -70,7 +70,7 @@ window.WIKI_PAGES["wgevents-spawns"] = {
           <strong>Important split</strong>
           <p>Team spawn zones and FFA spawnzone sets are not the same storage path. Team modes key off team aliases, while FFA keys off a named set of one or more regions.</p>
         </div>
-      `,
+  `.trim(),
   resources: [
     {
       title: "Match flow",

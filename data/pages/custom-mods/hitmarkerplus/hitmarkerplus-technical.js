@@ -9,7 +9,7 @@ window.WIKI_PAGES["hitmarkerplus-technical"] = {
   needsUpdate: false,
   updateMessage: "",
   body: `
-        <p>Although HitmarkerPlus is small, the source is cleanly split into server, shared, and client responsibilities rather than bundling everything into one class.</p>
+<p>Although HitmarkerPlus is small, the source is cleanly split into server, shared, and client responsibilities rather than bundling everything into one class.</p>
 
         <h3>Main components</h3>
         <ul>
@@ -59,7 +59,7 @@ window.WIKI_PAGES["hitmarkerplus-technical"] = {
 
         <h3>Version context from the uploaded source</h3>
         <p>The uploaded Gradle properties identify the audited source state as <strong>1.0.20_X2</strong> on the <strong>main</strong> branch.</p>
-      `,
+  `.trim(),
   resources: [
     {
       title: "Feedback behaviour",

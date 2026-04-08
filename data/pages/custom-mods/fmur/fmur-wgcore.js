@@ -8,7 +8,7 @@ window.WIKI_PAGES["fmur-wgcore"] = {
   lastUpdated: "2026-04-07",
   needsUpdate: false,
   body: `
-        <p>This page documents the main <strong>Wargames-specific</strong> work in the FMUR fork. Compared with the wider Flan and FMUR lineage, this layer is smaller in scope but very important operationally because it makes FMUR behave correctly inside WGCore territory, war, and protection rules.</p>
+<p>This page documents the main <strong>Wargames-specific</strong> work in the FMUR fork. Compared with the wider Flan and FMUR lineage, this layer is smaller in scope but very important operationally because it makes FMUR behave correctly inside WGCore territory, war, and protection rules.</p>
 
         <h3>Central integration entry point</h3>
         <p>The main integration entry point is <code>com.flansmod.common.wgc.Integrations</code>.</p>
@@ -44,7 +44,7 @@ window.WIKI_PAGES["fmur-wgcore"] = {
           <strong>Operational result</strong>
           <p>If FMUR damage or explosions behave differently across safezones, claims, or war-controlled areas, that is usually intentional WGCore integration rather than a random mod inconsistency.</p>
         </div>
-      `,
+  `.trim(),
   resources: [
     {
       title: "FMUR overview",

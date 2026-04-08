@@ -9,7 +9,7 @@ window.WIKI_PAGES["wgevents-teams"] = {
   needsUpdate: false,
   updateMessage: "",
   body: `
-        <p>WGEvents separates team identity, team assignment, and scoreboard representation into different layers so round logic stays clean.</p>
+<p>WGEvents separates team identity, team assignment, and scoreboard representation into different layers so round logic stays clean.</p>
 
         <h3>Registry vs assignment</h3>
         <ul>
@@ -59,7 +59,7 @@ window.WIKI_PAGES["wgevents-teams"] = {
           <li>Late joiners are assigned through the same balancing path while a match is active</li>
           <li>Assignments and scoreboard state are fully cleared when the match stops</li>
         </ul>
-      `,
+  `.trim(),
   resources: [
     {
       title: "Spawns & idle lobby",

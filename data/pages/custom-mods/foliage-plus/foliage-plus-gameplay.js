@@ -9,7 +9,7 @@ window.WIKI_PAGES["foliage-plus-gameplay"] = {
   needsUpdate: false,
   updateMessage: "",
   body: `
-        <p>Foliage+ changes leaves from simple static blocks into interactive cover. The core gameplay loop is that foliage becomes easier to move through, but not free to abuse.</p>
+<p>Foliage+ changes leaves from simple static blocks into interactive cover. The core gameplay loop is that foliage becomes easier to move through, but not free to abuse.</p>
 
         <h3>Pass-through leaves</h3>
         <p>The transformer hooks into Minecraft's block collision handling and can skip collision on leaf blocks. In practical terms, that means players can move through vanilla leaves instead of being stopped by them like a wall.</p>
@@ -45,7 +45,7 @@ window.WIKI_PAGES["foliage-plus-gameplay"] = {
           <strong>Gameplay effect</strong>
           <p>This setup gives servers a middle ground between fully solid leaves and completely free bush movement. Players can use foliage as soft cover and concealment, but they cannot always hide fully inside it without restriction.</p>
         </div>
-      `,
+  `.trim(),
   resources: [
     {
       title: "Configuration",
@@ -64,7 +64,7 @@ window.WIKI_PAGES["foliage-plus-gameplay"] = {
   history: [
     {
       date: "2026-04-08",
-      text: "Added a dedicated gameplay page describing movement, slowdown, sound, and dense-foliage behaviour." 
+      text: "Added a dedicated gameplay page describing movement, slowdown, sound, and dense-foliage behaviour."
     }
   ]
 };

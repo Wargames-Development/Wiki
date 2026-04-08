@@ -8,7 +8,25 @@ window.WIKI_PAGES["ntm-space"] = {
   lastUpdated: "2026-04-07",
   needsUpdate: false,
   updateMessage: "",
-  body: "\n        <p><strong>NTM: Space</strong> is the HBM Space branch represented in the Wargames source stack. It is the larger base mod that provides the main content, progression, machinery, weapons, and space-related systems.</p>\n        <div class=\"callout\">\n          <strong>Important documentation note</strong>\n          <p>This page is the general overview only. For normal progression, content, machines, and gameplay reference, use the official HBM Space wiki. The Wargames-specific changes are documented in the dedicated WDG Edition pages linked below.</p>\n        </div>\n        <h3>What this base mod is for</h3>\n        <ul>\n          <li>Weapons, explosives, and nuclear-themed systems</li>\n          <li>Machines, blocks, and world interaction systems</li>\n          <li>Space-related progression and content</li>\n          <li>A large content-heavy foundation that other Wargames systems build around</li>\n        </ul>\n        <h3>How to use this wiki section</h3>\n        <ul>\n          <li>Use the official HBM Space wiki for base progression and content reference</li>\n          <li>Use the WDG Edition subpages here for the fork-specific ownership, protection, missile, and server-behaviour changes</li>\n        </ul>\n      ",
+  body: `
+<p><strong>NTM: Space</strong> is the HBM Space branch represented in the Wargames source stack. It is the larger base mod that provides the main content, progression, machinery, weapons, and space-related systems.</p>
+        <div class="callout">
+          <strong>Important documentation note</strong>
+          <p>This page is the general overview only. For normal progression, content, machines, and gameplay reference, use the official HBM Space wiki. The Wargames-specific changes are documented in the dedicated WDG Edition pages linked below.</p>
+        </div>
+        <h3>What this base mod is for</h3>
+        <ul>
+          <li>Weapons, explosives, and nuclear-themed systems</li>
+          <li>Machines, blocks, and world interaction systems</li>
+          <li>Space-related progression and content</li>
+          <li>A large content-heavy foundation that other Wargames systems build around</li>
+        </ul>
+        <h3>How to use this wiki section</h3>
+        <ul>
+          <li>Use the official HBM Space wiki for base progression and content reference</li>
+          <li>Use the WDG Edition subpages here for the fork-specific ownership, protection, missile, and server-behaviour changes</li>
+        </ul>
+  `.trim(),
   resources: [
     {
       title: "Official HBM Space wiki",

@@ -7,7 +7,26 @@ window.WIKI_PAGES["installation"] = {
   releaseState: "Live",
   lastUpdated: "2026-04-07",
   needsUpdate: false,
-  body: "\n        <p>Wargames Survival is currently distributed through public launcher pages. This page is intentionally short and practical so new players can get into the pack quickly.</p>\n        <h3>Recommended setup flow</h3>\n        <ol>\n          <li>Open the Wargames modpack page on your preferred launcher.</li>\n          <li>Install the pack and let the launcher finish downloading all required files.</li>\n          <li>Launch the pack once so it can build its local profile and config folders.</li>\n          <li>Join the community Discord if you need live help, server details, or troubleshooting.</li>\n        </ol>\n        <h3>Before you ask for support</h3>\n        <ul>\n          <li>Make sure you are launching the current published Wargames pack version</li>\n          <li>Allow the launcher to complete the full first-time download before closing it</li>\n          <li>Keep your crash log or error message ready if you need help in Discord</li>\n        </ul>\n        <div class=\"callout\">\n          <strong>Note</strong>\n          <p>This page avoids hardcoding system requirements that may change. If RAM guidance or Java guidance changes later, update this page and add a history entry instead of burying the information in announcements.</p>\n        </div>\n      ",
+  body: `
+<p>Wargames Survival is currently distributed through public launcher pages. This page is intentionally short and practical so new players can get into the pack quickly.</p>
+        <h3>Recommended setup flow</h3>
+        <ol>
+          <li>Open the Wargames modpack page on your preferred launcher.</li>
+          <li>Install the pack and let the launcher finish downloading all required files.</li>
+          <li>Launch the pack once so it can build its local profile and config folders.</li>
+          <li>Join the community Discord if you need live help, server details, or troubleshooting.</li>
+        </ol>
+        <h3>Before you ask for support</h3>
+        <ul>
+          <li>Make sure you are launching the current published Wargames pack version</li>
+          <li>Allow the launcher to complete the full first-time download before closing it</li>
+          <li>Keep your crash log or error message ready if you need help in Discord</li>
+        </ul>
+        <div class="callout">
+          <strong>Note</strong>
+          <p>This page avoids hardcoding system requirements that may change. If RAM guidance or Java guidance changes later, update this page and add a history entry instead of burying the information in announcements.</p>
+        </div>
+  `.trim(),
   resources: [
     {
       title: "Technic",

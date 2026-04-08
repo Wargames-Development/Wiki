@@ -9,7 +9,7 @@ window.WIKI_PAGES["wgevents-commands"] = {
   needsUpdate: false,
   updateMessage: "",
   body: `
-        <p>WGEvents deliberately separates commands into two layers:</p>
+<p>WGEvents deliberately separates commands into two layers:</p>
         <ul>
           <li><strong>/wge</strong> or <strong>/wgevents</strong> — admin-only control surface</li>
           <li><strong>/wg</strong> — public player-facing status and vote surface</li>
@@ -47,7 +47,7 @@ window.WIKI_PAGES["wgevents-commands"] = {
 
         <h3>Why the split matters</h3>
         <p>This separation keeps event administration powerful without making the public player command path noisy or risky. Players can see status and vote; admins control event structure, spawns, and technical toggles through a separate namespaced command.</p>
-      `,
+  `.trim(),
   resources: [
     {
       title: "Rewards & voting",

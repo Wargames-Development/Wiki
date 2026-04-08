@@ -8,7 +8,16 @@ window.WIKI_PAGES["survival"] = {
   lastUpdated: "2026-04-07",
   needsUpdate: true,
   updateMessage: "This page still needs a proper writeup of world progression, economy rules, and server-specific survival mechanics.",
-  body: "\n        <p>This page is reserved for the broader survival layer of the pack rather than only factions, war, or combat. It will eventually be the place for explaining progression, environment rules, pack-specific expectations, and any systems that shape long-term play.</p>\n        <h3>Good future sections</h3>\n        <ul>\n          <li>World progression and danger scaling</li>\n          <li>Loot, resources, and progression bottlenecks</li>\n          <li>Server rules that differ from player assumptions</li>\n          <li>How the custom mods support the wider survival loop</li>\n        </ul>\n      ",
+  body: `
+<p>This page is reserved for the broader survival layer of the pack rather than only factions, war, or combat. It will eventually be the place for explaining progression, environment rules, pack-specific expectations, and any systems that shape long-term play.</p>
+        <h3>Good future sections</h3>
+        <ul>
+          <li>World progression and danger scaling</li>
+          <li>Loot, resources, and progression bottlenecks</li>
+          <li>Server rules that differ from player assumptions</li>
+          <li>How the custom mods support the wider survival loop</li>
+        </ul>
+  `.trim(),
   resources: [],
   videos: [],
   history: [

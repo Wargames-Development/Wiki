@@ -9,7 +9,7 @@ window.WIKI_PAGES["foliage-plus"] = {
   needsUpdate: false,
   updateMessage: "",
   body: `
-        <p><strong>Foliage+</strong> is a small original Wargames support mod for Forge 1.7.10. Its purpose is simple: leaf blocks should behave more like dense foliage and less like hard terrain.</p>
+<p><strong>Foliage+</strong> is a small original Wargames support mod for Forge 1.7.10. Its purpose is simple: leaf blocks should behave more like dense foliage and less like hard terrain.</p>
 
         <p>Instead of treating leaves only as visual decoration or awkward solid collision, the mod allows controlled movement through them, optional slowdown while inside them, and loud rustling audio so concealment still carries a gameplay cost.</p>
 
@@ -34,7 +34,7 @@ window.WIKI_PAGES["foliage-plus"] = {
           <li><strong>Configuration</strong> — server options and gameplay tuning controls</li>
           <li><strong>Technical implementation</strong> — how the mod uses a coremod transformer, hooks, and tick handlers</li>
         </ul>
-      `,
+  `.trim(),
   resources: [
     {
       title: "Gameplay behaviour",
@@ -65,7 +65,7 @@ window.WIKI_PAGES["foliage-plus"] = {
   history: [
     {
       date: "2026-04-08",
-      text: "Expanded Foliage+ from a single short page into a proper multi-page section based on the uploaded source and README." 
+      text: "Expanded Foliage+ from a single short page into a proper multi-page section based on the uploaded source and README."
     }
   ]
 };

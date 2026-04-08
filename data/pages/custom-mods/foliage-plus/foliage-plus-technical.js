@@ -9,7 +9,7 @@ window.WIKI_PAGES["foliage-plus-technical"] = {
   needsUpdate: false,
   updateMessage: "",
   body: `
-        <p>Although Foliage+ is small in scope, it is not implemented as a single event hack. The source uses a mixed standard-mod and coremod structure so collision handling can be altered at block level while movement and sound stay in ordinary tick-based logic.</p>
+<p>Although Foliage+ is small in scope, it is not implemented as a single event hack. The source uses a mixed standard-mod and coremod structure so collision handling can be altered at block level while movement and sound stay in ordinary tick-based logic.</p>
 
         <h3>Main components</h3>
         <ul>
@@ -46,7 +46,7 @@ window.WIKI_PAGES["foliage-plus-technical"] = {
 
         <h3>Version context from the uploaded source</h3>
         <p>The uploaded Gradle properties identify the audited source state as <strong>1.0.0_X11</strong> on the <strong>release</strong> branch, with Forge 1.7.10 / 10.13.4.1614 targeting.</p>
-      `,
+  `.trim(),
   resources: [
     {
       title: "Overview",
@@ -65,7 +65,7 @@ window.WIKI_PAGES["foliage-plus-technical"] = {
   history: [
     {
       date: "2026-04-08",
-      text: "Added a dedicated technical page covering the mod, coremod, hooks, transformer, and sound setup." 
+      text: "Added a dedicated technical page covering the mod, coremod, hooks, transformer, and sound setup."
     }
   ]
 };

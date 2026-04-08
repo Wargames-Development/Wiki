@@ -8,7 +8,26 @@ window.WIKI_PAGES["ntm-space-server-impact"] = {
   lastUpdated: "2026-04-07",
   needsUpdate: false,
   updateMessage: "",
-  body: "\n        <p>This fork exists because large-scale HBM-style weapons are difficult to manage on structured multiplayer servers if they do not carry ownership and do not respect protected areas.</p>\n        <h3>Problems this fork addresses</h3>\n        <ul>\n          <li>Anonymous explosives once placed or fired</li>\n          <li>Long-range weapons bypassing territory rules on impact</li>\n          <li>Protected bases being exposed to uncontrolled explosive block damage</li>\n          <li>Radiation, contamination, and EMP effects crossing into protected space without filtering</li>\n          <li>Turrets and launch systems lacking faction-aware behaviour</li>\n        </ul>\n        <h3>Where this matters most</h3>\n        <ul>\n          <li>Faction servers using claims or protected territory</li>\n          <li>Event servers where powerful weapons need to remain usable but controlled</li>\n          <li>Modpacks that want HBM Space systems without fully open-ended griefing</li>\n          <li>Private multiplayer environments that need attribution and predictable conflict rules</li>\n        </ul>\n        <h3>Practical result</h3>\n        <p>The goal is not to remove destructive weapons. It is to make them behave in a controlled, attributable, and protection-aware way so they can still exist inside a structured server environment.</p>\n      ",
+  body: `
+<p>This fork exists because large-scale HBM-style weapons are difficult to manage on structured multiplayer servers if they do not carry ownership and do not respect protected areas.</p>
+        <h3>Problems this fork addresses</h3>
+        <ul>
+          <li>Anonymous explosives once placed or fired</li>
+          <li>Long-range weapons bypassing territory rules on impact</li>
+          <li>Protected bases being exposed to uncontrolled explosive block damage</li>
+          <li>Radiation, contamination, and EMP effects crossing into protected space without filtering</li>
+          <li>Turrets and launch systems lacking faction-aware behaviour</li>
+        </ul>
+        <h3>Where this matters most</h3>
+        <ul>
+          <li>Faction servers using claims or protected territory</li>
+          <li>Event servers where powerful weapons need to remain usable but controlled</li>
+          <li>Modpacks that want HBM Space systems without fully open-ended griefing</li>
+          <li>Private multiplayer environments that need attribution and predictable conflict rules</li>
+        </ul>
+        <h3>Practical result</h3>
+        <p>The goal is not to remove destructive weapons. It is to make them behave in a controlled, attributable, and protection-aware way so they can still exist inside a structured server environment.</p>
+  `.trim(),
   resources: [
     {
       title: "HBM Space WDG Edition overview",

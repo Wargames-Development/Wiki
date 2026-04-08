@@ -9,7 +9,7 @@ window.WIKI_PAGES["wgevents-architecture"] = {
   needsUpdate: false,
   updateMessage: "",
   body: `
-        <p>The WGEvents source is already structured in a way that is easy to document and maintain. The main code is split into clear domains rather than being folded into one large command class or event handler.</p>
+<p>The WGEvents source is already structured in a way that is easy to document and maintain. The main code is split into clear domains rather than being folded into one large command class or event handler.</p>
 
         <h3>Main architectural layers</h3>
         <ul>
@@ -65,7 +65,7 @@ window.WIKI_PAGES["wgevents-architecture"] = {
           <strong>Why this matters for the wiki</strong>
           <p>WGEvents is one of your own mods, so documenting it as “just a plugin-like command set” would undersell it. The source already has a proper internal structure with persisted world data, stateful services, config layers, and separate automation systems.</p>
         </div>
-      `,
+  `.trim(),
   resources: [
     {
       title: "Commands",

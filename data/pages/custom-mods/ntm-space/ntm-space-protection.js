@@ -8,7 +8,33 @@ window.WIKI_PAGES["ntm-space-protection"] = {
   lastUpdated: "2026-04-07",
   needsUpdate: false,
   updateMessage: "",
-  body: "\n        <p>The WDG Edition adds persistent ownership tracking to major destructive systems and uses that context to decide whether effects are allowed in protected areas.</p>\n        <h3>What carries ownership</h3>\n        <ul>\n          <li>Bombs and explosives</li>\n          <li>Missiles and rockets</li>\n          <li>Shells and similar long-range munitions</li>\n          <li>Turrets and their projectiles</li>\n          <li>Launch systems and target designators</li>\n        </ul>\n        <h3>What protection affects</h3>\n        <ul>\n          <li>Detonation checks in protected claims or territory</li>\n          <li>Whether an explosion is allowed, limited, or blocked</li>\n          <li>Whether block damage is skipped in protected chunks</li>\n          <li>Whether radiation or contamination spread is blocked or limited</li>\n          <li>Whether EMP effects are allowed in protected areas</li>\n          <li>Whether player damage is filtered through protection rules</li>\n        </ul>\n        <h3>Examples</h3>\n        <ul>\n          <li>A nuke can still be attributed to its owner instead of becoming an anonymous explosion source</li>\n          <li>A missile hitting protected territory can be blocked or modified at the impact point</li>\n          <li>A turret projectile can carry the turret owner context instead of behaving like an unowned shot</li>\n          <li>Protected chunks can prevent block destruction even if a weapon still detonates visually or partially</li>\n        </ul>\n      ",
+  body: `
+<p>The WDG Edition adds persistent ownership tracking to major destructive systems and uses that context to decide whether effects are allowed in protected areas.</p>
+        <h3>What carries ownership</h3>
+        <ul>
+          <li>Bombs and explosives</li>
+          <li>Missiles and rockets</li>
+          <li>Shells and similar long-range munitions</li>
+          <li>Turrets and their projectiles</li>
+          <li>Launch systems and target designators</li>
+        </ul>
+        <h3>What protection affects</h3>
+        <ul>
+          <li>Detonation checks in protected claims or territory</li>
+          <li>Whether an explosion is allowed, limited, or blocked</li>
+          <li>Whether block damage is skipped in protected chunks</li>
+          <li>Whether radiation or contamination spread is blocked or limited</li>
+          <li>Whether EMP effects are allowed in protected areas</li>
+          <li>Whether player damage is filtered through protection rules</li>
+        </ul>
+        <h3>Examples</h3>
+        <ul>
+          <li>A nuke can still be attributed to its owner instead of becoming an anonymous explosion source</li>
+          <li>A missile hitting protected territory can be blocked or modified at the impact point</li>
+          <li>A turret projectile can carry the turret owner context instead of behaving like an unowned shot</li>
+          <li>Protected chunks can prevent block destruction even if a weapon still detonates visually or partially</li>
+        </ul>
+  `.trim(),
   resources: [
     {
       title: "HBM Space WDG Edition overview",

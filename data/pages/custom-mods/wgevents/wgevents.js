@@ -9,7 +9,7 @@ window.WIKI_PAGES["wgevents"] = {
   needsUpdate: false,
   updateMessage: "",
   body: `
-        <p><strong>WGEvents</strong> is a Wargames-developed event-server mod built around structured, server-controlled match flow rather than persistent survival progression. The uploaded source shows a complete event framework with match states, late-join handling, controlled respawns, team balancing, FFA support, voting, rewards, and idle-lobby enforcement.</p>
+<p><strong>WGEvents</strong> is a Wargames-developed event-server mod built around structured, server-controlled match flow rather than persistent survival progression. The uploaded source shows a complete event framework with match states, late-join handling, controlled respawns, team balancing, FFA support, voting, rewards, and idle-lobby enforcement.</p>
 
         <h3>What WGEvents is for</h3>
         <ul>
@@ -39,7 +39,7 @@ window.WIKI_PAGES["wgevents"] = {
 
         <h3>What the current source shows clearly</h3>
         <p>This is not just a placeholder admin utility. The reviewed source already includes the full shape of an event platform: countdown freeze control, protected pre-match states, active-match scoring, post-match return to idle, public voting, config-backed rule tuning, and persistent per-world stores for teams, spawn data, and event settings.</p>
-      `,
+  `.trim(),
   resources: [
     {
       title: "Match flow & round states",

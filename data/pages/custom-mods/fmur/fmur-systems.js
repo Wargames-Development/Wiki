@@ -8,7 +8,7 @@ window.WIKI_PAGES["fmur-systems"] = {
   lastUpdated: "2026-04-07",
   needsUpdate: false,
   body: `
-        <p>Beyond the WGCore combat-rule layer, the Wargames Edition also carries a smaller set of practical fixes and cleanup work.</p>
+<p>Beyond the WGCore combat-rule layer, the Wargames Edition also carries a smaller set of practical fixes and cleanup work.</p>
 
         <h3>Cross-platform player stats handling</h3>
         <ul>
@@ -33,7 +33,7 @@ window.WIKI_PAGES["fmur-systems"] = {
 
         <h3>How to think about this page</h3>
         <p>This page is the <strong>smallest layer</strong> in the overall chain, but it is still useful because it documents the project-specific parts that are neither broad upstream FMUR behaviour nor direct WGCore damage protection logic.</p>
-      `,
+  `.trim(),
   resources: [
     {
       title: "FMUR overview",

@@ -7,7 +7,16 @@ window.WIKI_PAGES["release-notes"] = {
   releaseState: "Live",
   lastUpdated: "2026-04-07",
   needsUpdate: false,
-  body: "\n        <p>This page tracks visible changes to the wiki itself and can also be used later for pack-facing notes if you want one public summary page.</p>\n        <h3>Current wiki milestones</h3>\n        <ul>\n          <li>GitHub Pages deployment prepared for <code>wiki.wargames.host</code></li>\n          <li>Discord, Technic, and CurseForge links wired into the header</li>\n          <li>WGCore overview and WGCore command index added</li>\n          <li>First-pass custom mod stack reference added from the uploaded codebases</li>\n        </ul>\n      ",
+  body: `
+<p>This page tracks visible changes to the wiki itself and can also be used later for pack-facing notes if you want one public summary page.</p>
+        <h3>Current wiki milestones</h3>
+        <ul>
+          <li>GitHub Pages deployment prepared for <code>wiki.wargames.host</code></li>
+          <li>Discord, Technic, and CurseForge links wired into the header</li>
+          <li>WGCore overview and WGCore command index added</li>
+          <li>First-pass custom mod stack reference added from the uploaded codebases</li>
+        </ul>
+  `.trim(),
   resources: [],
   videos: [],
   history: [

@@ -9,7 +9,7 @@ window.WIKI_PAGES["wgevents-match-flow"] = {
   needsUpdate: false,
   updateMessage: "",
   body: `
-        <p>The event lifecycle is driven by <code>MatchManager</code> and a small, explicit state model:</p>
+<p>The event lifecycle is driven by <code>MatchManager</code> and a small, explicit state model:</p>
 
         <ul>
           <li><strong>IDLE</strong> — no event is running</li>
@@ -73,7 +73,7 @@ window.WIKI_PAGES["wgevents-match-flow"] = {
           <strong>Important design point</strong>
           <p>WGEvents does not treat “match running” as a loose flag. The state machine is small but deliberate, and several protection systems use those exact states to decide whether players can move, fight, build, vote, or be teleported.</p>
         </div>
-      `,
+  `.trim(),
   resources: [
     {
       title: "WGEvents overview",

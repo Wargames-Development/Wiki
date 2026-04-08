@@ -9,7 +9,7 @@ window.WIKI_PAGES["hitmarkerplus"] = {
   needsUpdate: false,
   updateMessage: "",
   body: `
-        <p><strong>HitmarkerPlus</strong> is a small original Wargames support mod for Forge 1.7.10. Its job is narrow but useful: when a player lands a valid hit with a Flan bullet, the shooter receives immediate local feedback through a short on-screen hitmarker and a matching sound.</p>
+<p><strong>HitmarkerPlus</strong> is a small original Wargames support mod for Forge 1.7.10. Its job is narrow but useful: when a player lands a valid hit with a Flan bullet, the shooter receives immediate local feedback through a short on-screen hitmarker and a matching sound.</p>
 
         <p>The uploaded source shows a deliberately lightweight design. The server watches for Flan bullet damage, identifies the shooter, and sends a tiny client packet back only to that player. The client then renders the overlay and plays the hitmarker sound locally.</p>
 
@@ -34,7 +34,7 @@ window.WIKI_PAGES["hitmarkerplus"] = {
           <li><strong>Installation &amp; compatibility</strong> — practical deployment notes for client and server</li>
           <li><strong>Technical implementation</strong> — event flow, packet path, overlay rendering, and assets</li>
         </ul>
-      `,
+  `.trim(),
   resources: [
     {
       title: "Feedback behaviour",
